@@ -666,7 +666,10 @@ class Admin extends AdminModule
           ->where('no_rawat', $row['no_rawat'])
           ->asc('prioritas')
           ->toArray();
-        $row['pemeriksaan_ralan'] = $this->db('pemeriksaan_ralan')->where('no_rawat', $row['no_rawat'])->toArray();
+        $row['pemeriksaan_ralan'] = $this->db('pemeriksaan_ralan')
+        ->join('pegawai','pemeriksaan_ralan.nip=pegawai.nik')
+        ->where('no_rawat', $row['no_rawat'])
+        ->toArray();
         $row['rawat_jl_dr'] = $this->db('rawat_jl_dr')
           ->join('jns_perawatan', 'jns_perawatan.kd_jenis_prw=rawat_jl_dr.kd_jenis_prw')
           ->join('dokter', 'dokter.kd_dokter=rawat_jl_dr.kd_dokter')
@@ -697,7 +700,10 @@ class Admin extends AdminModule
         $check_table->execute();
         $check_table = $check_table->fetch();
         if($check_table) {
-          $row['pemeriksaan_ranap'] = $this->db('pemeriksaan_ranap')->where('no_rawat', $row['no_rawat'])->toArray();
+          $row['pemeriksaan_ranap'] = $this->db('pemeriksaan_ranap')
+          ->join('pegawai','pemeriksaan_ranap.nip=pegawai.nik')
+          ->where('no_rawat', $row['no_rawat'])
+          ->toArray();
           $row['rawat_inap_dr'] = $this->db('rawat_inap_dr')
             ->join('jns_perawatan_inap', 'jns_perawatan_inap.kd_jenis_prw=rawat_inap_dr.kd_jenis_prw')
             ->join('dokter', 'dokter.kd_dokter=rawat_inap_dr.kd_dokter')
@@ -1045,7 +1051,10 @@ class Admin extends AdminModule
           ->where('no_rawat', $row['no_rawat'])
           ->asc('prioritas')
           ->toArray();
-        $row['pemeriksaan_ralan'] = $this->db('pemeriksaan_ralan')->where('no_rawat', $row['no_rawat'])->toArray();
+        $row['pemeriksaan_ralan'] = $this->db('pemeriksaan_ralan')
+        ->join('pegawai','pemeriksaan_ralan.nip=pegawai.nik')
+        ->where('no_rawat', $row['no_rawat'])
+        ->toArray();
         $row['rawat_jl_dr'] = $this->db('rawat_jl_dr')
           ->join('jns_perawatan', 'jns_perawatan.kd_jenis_prw=rawat_jl_dr.kd_jenis_prw')
           ->join('dokter', 'dokter.kd_dokter=rawat_jl_dr.kd_dokter')
@@ -1076,7 +1085,10 @@ class Admin extends AdminModule
         $check_table->execute();
         $check_table = $check_table->fetch();
         if($check_table) {
-          $row['pemeriksaan_ranap'] = $this->db('pemeriksaan_ranap')->where('no_rawat', $row['no_rawat'])->toArray();
+          $row['pemeriksaan_ranap'] = $this->db('pemeriksaan_ranap')
+          ->join('pegawai','pemeriksaan_ranap.nip=pegawai.nik')
+          ->where('no_rawat', $row['no_rawat'])
+          ->toArray();
           $row['rawat_inap_dr'] = $this->db('rawat_inap_dr')
             ->join('jns_perawatan_inap', 'jns_perawatan_inap.kd_jenis_prw=rawat_inap_dr.kd_jenis_prw')
             ->join('dokter', 'dokter.kd_dokter=rawat_inap_dr.kd_dokter')

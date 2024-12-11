@@ -342,6 +342,7 @@
                 <td valign="top" bgcolor="#eee">SPO2</td>
                 <td valign="top" bgcolor="#eee">Alergi</td>
                 <td valign="top" bgcolor="#eee">Kesadaran</td>
+                <td valign="top" bgcolor="#eee">Paramedis</td>
              </tr>
              {loop: $value.pemeriksaan_ralan as $data}
                <tr>
@@ -360,6 +361,7 @@
                   <td valign="top">{$data.spo2}</td>
                   <td valign="top">{$data.alergi}</td>
                   <td valign="top">{$data.kesadaran}</td>
+                  <td valign="top">{$data.nama}</td>
                </tr>
                <tr>
                   <td valign="top" colspan="2">Subjek</td>
@@ -394,6 +396,7 @@
                 <td valign="top" bgcolor="#eee">SPO2</td>
                 <td valign="top" bgcolor="#eee">Alergi</td>
                 <td valign="top" bgcolor="#eee">Kesadaran</td>
+                <td valign="top" bgcolor="#eee">Paramedis</td>
              </tr>
              {loop: $value.pemeriksaan_ranap as $data}
                <tr>
@@ -412,6 +415,7 @@
                   <td valign="top">{$data.spo2}</td>
                   <td valign="top">{$data.alergi}</td>
                   <td valign="top">{$data.kesadaran}</td>
+                  <td valign="top">{$data.nama}</td>
                </tr>
                <tr>
                   <td valign="top" colspan="2">Subjek</td>

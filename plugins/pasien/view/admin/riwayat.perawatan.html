@@ -342,6 +342,7 @@
                 <td valign="top" bgcolor="#eee">SPO2</td>
                 <td valign="top" bgcolor="#eee">Alergi</td>
                 <td valign="top" bgcolor="#eee">Kesadaran</td>
+                <td valign="top" bgcolor="#eee">Paramedis</td>
              </tr>
              {loop: $value.pemeriksaan_ralan as $data}
                <tr>
@@ -360,6 +361,7 @@
                   <td valign="top">{$data.spo2}</td>
                   <td valign="top">{$data.alergi}</td>
                   <td valign="top">{$data.kesadaran}</td>
+                  <td valign="top">{$data.nama}</td>
                </tr>
                <tr>
                   <td valign="top" colspan="2">Subjek</td>
@@ -377,6 +379,7 @@
                   <td valign="top" colspan="2">Plan</td>
                   <td valign="top" colspan="10"> : {$data.rtl}</td>
                </tr>
+              
              {/loop}
              {/if}
              {if: $value.pemeriksaan_ranap}
@@ -394,6 +397,7 @@
                 <td valign="top" bgcolor="#eee">SPO2</td>
                 <td valign="top" bgcolor="#eee">Alergi</td>
                 <td valign="top" bgcolor="#eee">Kesadaran</td>
+                <td valign="top" bgcolor="#eee">Paramedis</td>
              </tr>
              {loop: $value.pemeriksaan_ranap as $data}
                <tr>
@@ -412,6 +416,16 @@
                   <td valign="top">{$data.spo2}</td>
                   <td valign="top">{$data.alergi}</td>
                   <td valign="top">{$data.kesadaran}</td>
+                  <td valign="top">{$data.nama}</td>
+                  <!-- <div class="qrcodePetugas{$data.nama}" style="margin-top:10px;width:40px;margin-right: 120px;"></div>
+                  {$data.nama}
+                  <script>
+                    jQuery('.qrcodePetugas{$data.nama}').qrcode({
+                      width: 64,
+                      height: 64,
+                      text	: "Petugas: {$data.nama}"
+                    });
+                  </script> -->
                </tr>
                <tr>
                   <td valign="top" colspan="2">Subjek</td>
