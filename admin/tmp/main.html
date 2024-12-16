@@ -1,7 +1,7 @@
 <style>
   html {
     height: 0;
-    background: url('http://localhost/Edokter/uploads/settings/wallpaper_674e8583b066d.jpg') no-repeat center center fixed;
+    background: url('http://localhost/Edokter/uploads/settings/wallpaper_675a918366bde.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -180,7 +180,7 @@
 </style>
 
 <div class="dashboard_wall">
-  <img src="http://localhost/Edokter/uploads/settings/logo_674e842377869.png" class="logo" width="120px" alt="">
+  <img src="http://localhost/Edokter/uploads/settings/logo_675a91a080e6b.png" class="logo" width="120px" alt="">
   <p class="title">RS MUTIASARI</p>
   <p class="alamat">Jln. Bathin Betuah No. 1 - A. Jln. Kebun Karet, - Duri - RIAU</p>
 </div>
@@ -195,7 +195,7 @@
       </div>
       <i class="fa fa-exclamation-triangle"></i> Anda Belum Presensi<br>
       <i>*  
-Waktu yang hilang tidak akan pernah ditemukan lagi *</i>
+Ini bukan tentang ide. Ini tentang mewujudkan ide *</i>
     </div>
       <!-- The Modal -->
 <div class="modal" id="myModal" data-keyboard="false" data-backdrop="static">
@@ -307,14 +307,14 @@ Waktu yang hilang tidak akan pernah ditemukan lagi *</i>
 
       var base64image = document.getElementById("imageprev").src;
 
-      Webcam.upload(base64image, 'http://localhost/Edokter/admin/dashboard/upload?t=98af89fb5b43&shift=' + getshift, function (code, text) {
+      Webcam.upload(base64image, 'http://localhost/Edokter/admin/dashboard/upload?t=9e529f06a2e3&shift=' + getshift, function (code, text) {
       });
 
       Webcam.reset();
 
       navigator.geolocation.getCurrentPosition(
         function (position) {
-          $.post('http://localhost/Edokter/admin/dashboard/geolocation?t=98af89fb5b43', { lat: position.coords.latitude, lng: position.coords.longitude });
+          $.post('http://localhost/Edokter/admin/dashboard/geolocation?t=9e529f06a2e3', { lat: position.coords.latitude, lng: position.coords.longitude });
         },
         function error(err) { },
         { enableHighAccuracy: true, timeout: 5000 }

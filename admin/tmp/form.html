@@ -1,670 +1,518 @@
-<div class="row">
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Sunting pengguna</h3>
+<div id="form">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label">Tanggal Masuk</label>
+            <div class="col-sm-4">
+              <input type="text" id="tgl_masuk" name="tgl_masuk" class="form-control tanggal" value="2024-11-29">
             </div>
-            <div class="panel-body">
-    		<form name="user" action="http://192.168.102.13/Edokter/admin/users/save/17?t=48adec2fb909" method="POST" enctype="multipart/form-data">
-    			<fieldset>
-    	            <!--<div class="form-group">
-    	                <label>Pengguna</label>
-    	                <input type="text" name="username" class="form-control" required value="2202468" />
-    	            </div>-->
-                                    <div class="form-group">
-                      <label>Pengguna</label>
-                      <select name="username" id="username" class="form-control" data-use-search="true" onchange="document.getElementById('fullname').value=this.options[this.selectedIndex].text.split(' -')[0]">
-                                                        <option value="2102366">dr. Leo Pratama Agung - 2102366</option>
-                                                        <option value="2206413">Elsa Asmelia SE - 2206413</option>
-                                                        <option value="2102364">dr. Abdul Robby Azhadi MARS FISQua - 2102364</option>
-                                                        <option value="1502044">dr. Muhammad Yusuf - 1502044</option>
-                                                        <option value="1602051">dr. Riri Pratiwi. S - 1602051</option>
-                                                        <option value="2202496">dr. Deastri Pratiwi MARS - 2202496</option>
-                                                        <option value="2202468" selected>dr. Ilham Akbar - 2202468</option>
-                                                        <option value="2206438">Awang Debyansyah, S. Ak. M.M - 2206438</option>
-                                                        <option value="0603006">Ns. Suhada S.Kep - 0603006</option>
-                                                        <option value="2205487">Nurul Arisanty Hrp, S.KM., CPRM - 2205487</option>
-                                                        <option value="1802202">dr. Syarafina Raihan MARS - 1802202</option>
-                                                        <option value="2106360">Aprinaldi - 2106360</option>
-                                                        <option value="1806172">Rabiah Demlinur Putri S.I.Kom - 1806172</option>
-                                                        <option value="1801144">dr. Hermadia Sp.PD - 1801144</option>
-                                                        <option value="1801150">dr. Yuli Cardo Ardiles Sp.PD - 1801150</option>
-                                                        <option value="2101355">dr. Aidi Nasrul Sp.PD - 2101355</option>
-                                                        <option value="2101371">dr. Farah Soraya Effendi Sp.PD - 2101371</option>
-                                                        <option value="1301033">dr. Darwin NA. Sp.OG - 1301033</option>
-                                                        <option value="1601052">dr. H. R. Roseno Sarjanto. Sp.OG - 1601052</option>
-                                                        <option value="2001328">dr. Maduma Octha Marini Simarmata Sp.OG - 2001328</option>
-                                                        <option value="0601002">dr. R. Trin Suciati Sp.A - 0601002</option>
-                                                        <option value="1701081">dr. Teddy Ardan, Sp.A - 1701081</option>
-                                                        <option value="1501042">dr. Ruri Gusandi Sp.B - 1501042</option>
-                                                        <option value="1701114">dr. Gumana Uhum Panangian Sitompul Sp.B - 1701114</option>
-                                                        <option value="2101366">dr. Rafki Hidayat MKed.SURG Sp.B - 2101366</option>
-                                                        <option value="1601053">dr. Mufti Andri MKed.An Sp.An - 1601053</option>
-                                                        <option value="2201469">dr. Wicak Kunto Wibowo MKed.AN Sp.An - 2201469</option>
-                                                        <option value="1801149">dr. Rusdayani Sp. M - 1801149</option>
-                                                        <option value="1601055">dr. Fitry Adelia Sy. MKed.DV SpDV - 1601055</option>
-                                                        <option value="1701101">dr. Intan Yuliasari M.SC Sp.S - 1701101</option>
-                                                        <option value="2001327">dr. Fanel Putra Sp.N - 2001327</option>
-                                                        <option value="1701115">dr. Yelvita Roza Sp.THT-KL - 1701115</option>
-                                                        <option value="1801194">dr. Romaito Nasution Sp. P - 1801194</option>
-                                                        <option value="1901289">dr. Iin Kamelia Rambe Sp. K.F.R - 1901289</option>
-                                                        <option value="2101372">dr. Taufik Abdi, Sp. P. K - 2101372</option>
-                                                        <option value="2201412">dr. Cakra Andhika Sp. OT - 2201412</option>
-                                                        <option value="2201479">dr. Muhammad Fadlan Hamzah Sp. Rad M. Sc - 2201479</option>
-                                                        <option value="1302032">drg. Mona Lolita - 1302032</option>
-                                                        <option value="2002313">dr. Wiwing Marisya - 2002313</option>
-                                                        <option value="2002336">dr. Dea Oktoviani - 2002336</option>
-                                                        <option value="2102342">dr. Rafisha Putri Felladira - 2102342</option>
-                                                        <option value="2102373">dr. Rahmat Adil - 2102373</option>
-                                                        <option value="2202425">dr. Reza Sukmana - 2202425</option>
-                                                        <option value="2202459">dr. Laila Syifa Rahmi - 2202459</option>
-                                                        <option value="1704106">Widya Astuti Amd. Keb - 1704106</option>
-                                                        <option value="1804165">Nurhelinda Rizda, Amd. Keb - 1804165</option>
-                                                        <option value="2003302">Eka Ismalyah Harahap, A.Md. Kep - 2003302</option>
-                                                        <option value="2203415">Randu Ali Iqbal Rahmat, A. Md. Kep - 2203415</option>
-                                                        <option value="2203426">Rindiani Dharma, A. Md. Kep - 2203426</option>
-                                                        <option value="2203458">Ns. Rido Adrian Saputra S. Kep - 2203458</option>
-                                                        <option value="2204498">Angela Septiani, A.Md. Keb - 2204498</option>
-                                                        <option value="1704082">Yuliani S.Tr. Keb - 1704082</option>
-                                                        <option value="0504001">Welva Meri, S.Keb - 0504001</option>
-                                                        <option value="0904013">Dina Maryana, A.Md.keb - 0904013</option>
-                                                        <option value="1004019">Hotnida Elysabeth Amd. Keb - 1004019</option>
-                                                        <option value="1504048">Fitri Eci, A.Md.Keb - 1504048</option>
-                                                        <option value="1904245">Widia Octavia, Amd. Keb - 1904245</option>
-                                                        <option value="1904264">Lidia Fitria, Amd. Keb - 1904264</option>
-                                                        <option value="1904268">Susi Darika, Amd. Keb - 1904268</option>
-                                                        <option value="2104340">Manda Syafitri, Amd. Keb - 2104340</option>
-                                                        <option value="2203477">Eka Nurjannah, Am. Keb - 2203477</option>
-                                                        <option value="1804200">Az-Zahra Rahayu Septianingsih, S.Tr. Keb - 1804200</option>
-                                                        <option value="1604057">Genny Pratiwi, A.md. Keb - 1604057</option>
-                                                        <option value="1704130">Nur Malasari, Amd. Keb - 1704130</option>
-                                                        <option value="1804193">Ika Cahya Utami, S.Tr. Keb - 1804193</option>
-                                                        <option value="1904294">Siti Utari, Amd. Keb - 1904294</option>
-                                                        <option value="2103368">Ns. Esti Natalina S. Kep - 2103368</option>
-                                                        <option value="2103376">Cindy Maulana Putri, A. Md. Kep - 2103376</option>
-                                                        <option value="2203474">Ns. Zahwa Ayunda Salsabilla S. Kep - 2203474</option>
-                                                        <option value="2203486">Zahra Hanifah, A. Md. Kep - 2203486</option>
-                                                        <option value="1603065">Ns. Asmaul Husni. S. Kep - 1603065</option>
-                                                        <option value="1404038">Irma Sutiawati, A.Md.Keb - 1404038</option>
-                                                        <option value="1604059">Artika Apriyola, Amd. Keb - 1604059</option>
-                                                        <option value="1704120">Dian Gustina, Amd. Keb - 1704120</option>
-                                                        <option value="2003324">Vera Oktafiani, A,md. Kep - 2003324</option>
-                                                        <option value="2103367">Resti Andani A.md. Kep - 2103367</option>
-                                                        <option value="2203394">Silvia Dewi, A. Md. Kep - 2203394</option>
-                                                        <option value="2203418">Julia Fransisca Panjaitan A. Md. Kep - 2203418</option>
-                                                        <option value="2203429">Trivani Febiola, A. Md. Kep - 2203429</option>
-                                                        <option value="2203444">Evarisda Sihombing, A. Md. Kep - 2203444</option>
-                                                        <option value="0604004">Marlina Royati A.Md.Keb - 0604004</option>
-                                                        <option value="1203030">Rapi Kumala Dewi, A.Md.Kep - 1203030</option>
-                                                        <option value="1504046">Anna Khairani Siregar, A.Md.Keb - 1504046</option>
-                                                        <option value="1604061">Ranti Puspa Sari, Amd. Keb - 1604061</option>
-                                                        <option value="1704132">Melia Ulfa, Amd. Keb - 1704132</option>
-                                                        <option value="1703140">Ns. Erni Rahmayanti S. Kep - 1703140</option>
-                                                        <option value="1704141">Everyda Amd. Keb - 1704141</option>
-                                                        <option value="1703104">Ns. Rizki Fadhila S. Kep - 1703104</option>
-                                                        <option value="2203457">Fitria Wulandari Gultom, A. Md. Kep - 2203457</option>
-                                                        <option value="2203483">Fauziah Khairunnisa A. Md. Kep - 2203483</option>
-                                                        <option value="2003301">Disti Almahara Tama A.Md. Kep - 2003301</option>
-                                                        <option value="2203408">Nanda Septiana, AMK - 2203408</option>
-                                                        <option value="2203417">Ns. Nofita Oktafia S. Kep - 2203417</option>
-                                                        <option value="2203492">Elvi Kurnia Agusti Putri, A. Md. Kep - 2203492</option>
-                                                        <option value="2203495">Ardianti, A. Md. Kep - 2203495</option>
-                                                        <option value="2203482">Muhammad Fadli Khaironi A. Md. Kep - 2203482</option>
-                                                        <option value="1404040">Syaftri Yuni, A.Md.Keb - 1404040</option>
-                                                        <option value="1504050">Reni Suryani, A.Md.Keb - 1504050</option>
-                                                        <option value="1604056">Riska Atmajawati, A.md. Keb - 1604056</option>
-                                                        <option value="1704102">Winda Nilam Sari, Amd. Keb - 1704102</option>
-                                                        <option value="1704105">Nurbaini Amd. Keb - 1704105</option>
-                                                        <option value="2004335">Marlina Wana Sari, Amd. Keb - 2004335</option>
-                                                        <option value="2203481">Yurleni, A. Md. Keb - 2203481</option>
-                                                        <option value="2203484">Septa Erfin Selvya A. Md. Keb - 2203484</option>
-                                                        <option value="1403035">Sislawati A.Md Kep - 1403035</option>
-                                                        <option value="1704110">Vitria Dwi Mega Mita Sari, Amd. Keb - 1704110</option>
-                                                        <option value="1904296">Een Mardiani A.Md. Keb - 1904296</option>
-                                                        <option value="2003332">Elayani, Amd. Kep - 2003332</option>
-                                                        <option value="2103384">Dona Rahma Yani Amd. Kep - 2103384</option>
-                                                        <option value="2203395">Miftahul Khairani, A. Md. Kep - 2203395</option>
-                                                        <option value="2203396">Fira Oktadwina A. Md. Kep - 2203396</option>
-                                                        <option value="2203427">Emil Samawati, A. Md. Kep - 2203427</option>
-                                                        <option value="2203449">Retno Kaesti, Amd. Kep - 2203449</option>
-                                                        <option value="1703131">Ns. Alifa Hayati S. Kep - 1703131</option>
-                                                        <option value="0905056">Yoshika Syafitri S.Si Apt - 0905056</option>
-                                                        <option value="2205405">Apt. Dellaviana Ariska S. Farm - 2205405</option>
-                                                        <option value="2205446">apt. Dian Permata Sari, S. Farm - 2205446</option>
-                                                        <option value="0605008">Nelda Nengsih, Amaf - 0605008</option>
-                                                        <option value="1005020">Fitra Yenni S.Si - 1005020</option>
-                                                        <option value="1805190">Nengsi Rahayu, Amd. Farm - 1805190</option>
-                                                        <option value="1905276">Nuzulia, S. Farm - 1905276</option>
-                                                        <option value="2005320">Sukma Wanita Siregar, S. Farm - 2005320</option>
-                                                        <option value="2205390">Silvi Widya Syafitri, S. Farm - 2205390</option>
-                                                        <option value="2205391">Devi Dwi Lestari, S. Farm - 2205391</option>
-                                                        <option value="2205428">Aldila Putri Rafita, A. Md. Kes - 2205428</option>
-                                                        <option value="2205467">Enzelina Octavia, S. Farm - 2205467</option>
-                                                        <option value="2205491">Selvi Yani, A.Md. Farm - 2205491</option>
-                                                        <option value="1805166">Putri Audina - 1805166</option>
-                                                        <option value="1405034">Ardi  Suhendra A.Md. AK - 1405034</option>
-                                                        <option value="1005024">Megawati, Amd. AK - 1005024</option>
-                                                        <option value="1205028">Essy Afnal, Amd. AK - 1205028</option>
-                                                        <option value="1805181">Rahmi Yunita, Amd. AK - 1805181</option>
-                                                        <option value="1805180">Aisyah Hidayati, Amd. AK - 1805180</option>
-                                                        <option value="1905225">Rina Gustina, Amd. AK - 1905225</option>
-                                                        <option value="2205393">Ninda Nofriani, A. Md. Kes - 2205393</option>
-                                                        <option value="2205411">Wahyu Widya Kusuma, A. Md. Kes - 2205411</option>
-                                                        <option value="2205471">Suci Rahayu, A. Md. Kes - 2205471</option>
-                                                        <option value="1905259">Kurniawan, AMR - 1905259</option>
-                                                        <option value="1805162">Lusi Anggraini, AMR - 1805162</option>
-                                                        <option value="2205466">Aisyatul Mardiah Hutasuhut A. Md. Kes - 2205466</option>
-                                                        <option value="2205435">Ftr. Mona Addila MY S. Ftr - 2205435</option>
-                                                        <option value="2205451">Visy Yulia Putri A. Md. Kes - 2205451</option>
-                                                        <option value="1605076">Yuli Putri Wahyuni Amd. RMIK - 1605076</option>
-                                                        <option value="2105365">Ramida Lubis, Amd. Kes - 2105365</option>
-                                                        <option value="2205455">Mei Resi Sihotang, Amd. RMIK - 2205455</option>
-                                                        <option value="1806191">Riki Laksamana - 1806191</option>
-                                                        <option value="2206500">Fakhri Faddullah - 2206500</option>
-                                                        <option value="1006023">Liastri Nasution - 1006023</option>
-                                                        <option value="1604080">Vivi Anggraini Amd. Keb - 1604080</option>
-                                                        <option value="1706118">Rahmah Yenti Amd. Keb - 1706118</option>
-                                                        <option value="1905228">Armiati Amd. RM - 1905228</option>
-                                                        <option value="2106353">Fitrah Aprialdi - 2106353</option>
-                                                        <option value="1605079">Siska Amelia Amd. GZ - 1605079</option>
-                                                        <option value="0904014">Idmayeni Amd.Keb - 0904014</option>
-                                                        <option value="1806206">Marliyah - 1806206</option>
-                                                        <option value="1806209">Erni Liza - 1806209</option>
-                                                        <option value="1806213">Ernita - 1806213</option>
-                                                        <option value="2006330">Yossi Putri Dewi - 2006330</option>
-                                                        <option value="2206480">Ratih Wulandary A.md - 2206480</option>
-                                                        <option value="2206488">Maharani - 2206488</option>
-                                                        <option value="0705009">Marneli - 0705009</option>
-                                                        <option value="1806178">Muhammad Irfan, Amd - 1806178</option>
-                                                        <option value="2206436">Annisa Amelia, SKM - 2206436</option>
-                                                        <option value="2206473">Rahmat Hidayat, S. Kom - 2206473</option>
-                                                        <option value="1905288">Dhani Pratiwi SKM - 1905288</option>
-                                                        <option value="1704103">Delva Sartika Amd. Keb - 1704103</option>
-                                                        <option value="1705088">Suci Efti, Amd. Keb, SKM - 1705088</option>
-                                                        <option value="806010">Dewi Titin Agustina - 806010</option>
-                                                        <option value="1706087">Sariza. R Amd - 1706087</option>
-                                                        <option value="1806160">Mei Mila Putri Syani, Amd - 1806160</option>
-                                                        <option value="1806174">Aisya Silvany, SE - 1806174</option>
-                                                        <option value="1905291">Utami Pratiwi, SKM - 1905291</option>
-                                                        <option value="1905292">Nadia Femia Loveli SKM - 1905292</option>
-                                                        <option value="2206460">Nada Sri Mulyani - 2206460</option>
-                                                        <option value="2206461">Silvi, S. Ak - 2206461</option>
-                                                        <option value="2206462">Dwita Sari Azmi, S. IP - 2206462</option>
-                                                        <option value="1606063">Widmona Hademi SE - 1606063</option>
-                                                        <option value="1606069">Dharmansyah - 1606069</option>
-                                                        <option value="1706099">Mukhlis - 1706099</option>
-                                                        <option value="1906252">Syafnor - 1906252</option>
-                                                        <option value="2206392">Yogi Hadiswara - 2206392</option>
-                                                        <option value="2005329">Kandha Octa Mufadilla SKM - 2005329</option>
-                                                        <option value="1805173">Resita Gustina Amd. KL - 1805173</option>
-                                                        <option value="1706089">Mila Andesli - 1706089</option>
-                                                        <option value="2106362">Neneng Efriyanti - 2106362</option>
-                                                        <option value="2206419">Sayyitina Nour Huurun - 2206419</option>
-                                                        <option value="1106025">Edi Simanto - 1106025</option>
-                                                        <option value="1906285">Afdal Saputra - 1906285</option>
-                                                        <option value="2006304">Dedi Hermanto - 2006304</option>
-                                                        <option value="2206490">Dalil Azmi - 2206490</option>
-                                                        <option value="2206494">Muhammad Azhari - 2206494</option>
-                                                        <option value="1806177">Supartinah - 1806177</option>
-                                                        <option value="1801199">Bidasari - 1801199</option>
-                                                        <option value="1906242">Liza Molina - 1906242</option>
-                                                        <option value="1905293">Yati Nurjannah - 1905293</option>
-                                                        <option value="2006309">Neneng Tri Novia - 2006309</option>
-                                                        <option value="2006311">Bayu Supriatin - 2006311</option>
-                                                        <option value="2006312">Jasnaini - 2006312</option>
-                                                        <option value="2006318">Menik Suparmi - 2006318</option>
-                                                        <option value="2106381">Eldo Fernando - 2106381</option>
-                                                        <option value="2206441">Rahmat Iqbal Fakrezi - 2206441</option>
-                                                        <option value="2206453">Sri Rahayu. - 2206453</option>
-                                                        <option value="1606062">Harun Al-Rasyid - 1606062</option>
-                                                        <option value="1906240">Monsuhendra - 1906240</option>
-                                                        <option value="2106344">Muhammad Kanda Satria - 2106344</option>
-                                                        <option value="2206440">Bella Ulfa El Dwi Julia Putri - 2206440</option>
-                                                        <option value="1406036">Yanti Srihusnarti S.A.P - 1406036</option>
-                                                        <option value="2206409">Ardisa Lestari, S. Psi - 2206409</option>
-                                                        <option value="1806164">Lulu Hana Shafiyyah SH - 1806164</option>
-                                                        <option value="0606007">Sri dewi Yudianti, Amd - 0606007</option>
-                                                        <option value="1606071">Annisa Fitri - 1606071</option>
-                                                        <option value="1706138">Sazidah Amalia HRP, S. Psi - 1706138</option>
-                                                        <option value="1806203">Elsa Mayasari, S. Pd - 1806203</option>
-                                                        <option value="1806214">Rizka Septiani, S. AB - 1806214</option>
-                                                        <option value="1906258">Ultri Wigia S.I.Kom - 1906258</option>
-                                                        <option value="2206499">Annisa Silvia, S. Kom - 2206499</option>
-                                                        <option value="1806176">Dwi Resha Yulanda SE - 1806176</option>
-                                                        <option value="1806157">Halimah S. Ab - 1806157</option>
-                                                        <option value="1905271">Yulia Fridayyanti SKM - 1905271</option>
-                                                        <option value="1803154">Wulandari Oktavia S.Tr. Kep - 1803154</option>
-                                                        <option value="2206432">Cindy Rahmadany - 2206432</option>
-                                                        <option value="0001234">FACHRUR ROZI - 0001234</option>
-                                                        <option value="2106363">Niken Putri Nielta A.md - 2106363</option>
-                                                        <option value="2205506">Dini Rahmadani S. Farm Apt - 2205506</option>
-                                                        <option value="2203505">Defry Boby Welldy, A.Md.Kep - 2203505</option>
-                                                        <option value="1603075">Ns. Adi Aprian S.Kep - 1603075</option>
-                                                        <option value="0603005">Nazirin A.Md.Kep - 0603005</option>
-                                                        <option value="1003022">Nurhayani, A.Md.Kep - 1003022</option>
-                                                        <option value="1704119">Ari Susilayani, Amd. Keb - 1704119</option>
-                                                        <option value="2203437">Ns. Eka Afriadinata, S. Kep - 2203437</option>
-                                                        <option value="2203475">Ns. Al Muttakin S. Kep - 2203475</option>
-                                                        <option value="2203478">Mareski Candra A. Md. Kep - 2203478</option>
-                                                        <option value="2203507">Annisa Restifani Amd.Kep - 2203507</option>
-                                                        <option value="-">- - -</option>
-                                                        <option value="2206508">Putri Khairunisak S, Pd - 2206508</option>
-                                                        <option value="2101379">Dr. Christian Yosaputra Sp.J.P - 2101379</option>
-                                                        <option value="2206510">POPPY SUHATMAN - 2206510</option>
-                                                        <option value="KTR0001">Santi Fitria, S.Kes - KTR0001</option>
-                                                        <option value="2305511">Sanita Putri - 2305511</option>
-                                                        <option value="2303513">Alrahmawati - 2303513</option>
-                                                        <option value="2305512">Anjelina A.Md. Kes - 2305512</option>
-                                                        <option value="2203420">Hadi Syahrizal S.Tr Kes - 2203420</option>
-                                                        <option value="2305515">Windha Putri DyantiA.Md.Kes - 2305515</option>
-                                                        <option value="2305519">Rama Dessy Wahyuni S.farm - 2305519</option>
-                                                        <option value="2305520">SITI FATIMAH S. Farm - 2305520</option>
-                                                        <option value="2305526">Khalimah Rosyidatunnisa A. Md. Kes - 2305526</option>
-                                                        <option value="2303522">Rika Safrina Gaja - 2303522</option>
-                                                        <option value="2304526">Nike Dewi Putri Maharani S.Tr.Keb - 2304526</option>
-                                                        <option value="2304527">Diana Novita. S.T.r.Keb - 2304527</option>
-                                                        <option value="12345678">Percobaan - 12345678</option>
-                                                        <option value="2305530">Annasty srimuty rahayu A. Md. Kes - 2305530</option>
-                                                        <option value="2303531">Ns. Siti Munawaroh S. Kep - 2303531</option>
-                                                        <option value="2305532">Aprili Yasmin Dava Perdana A.Md.Kes - 2305532</option>
-                                                        <option value="2303534">Ns. Danti Arika Putri Nasution S.Kep - 2303534</option>
-                                                        <option value="2303535">Ns. Almi Sopiana Siregar - 2303535</option>
-                                                        <option value="2305537">Silvi Maidres Amd.Kes - 2305537</option>
-                                                        <option value="2303540">NS. Puti Rania Yulastari S.Kep - 2303540</option>
-                                                        <option value="2303541">Ns. Aldi S.Kep - 2303541</option>
-                                                        <option value="2305544">Elisabeti Pakpahan AMd.AK - 2305544</option>
-                                                        <option value="2303545">Ns. Fenny Anjelina SKep - 2303545</option>
-                                                        <option value="2304547">Afrida Ariani A.Md.Keb - 2304547</option>
-                                                        <option value="2203546">Ns. Meylani S.Kep - 2203546</option>
-                                                        <option value="2305549">Diah Pratiwi A.Md.Kes - 2305549</option>
-                                                        <option value="2306548">Roina Rumondang - 2306548</option>
-                                                        <option value="2305554">Indah Apriati Siagian A.Md.T - 2305554</option>
-                                                        <option value="2305555">Iklima A.Md.Kes - 2305555</option>
-                                                        <option value="2305553">Febri Yolanda Syafri A.Md Kes - 2305553</option>
-                                                        <option value="2305556">Dhia Salsa Latifah - 2305556</option>
-                                                        <option value="2305559">Miftahul Mubaraq - 2305559</option>
-                                                        <option value="2305558">Zukrina Isnaini - 2305558</option>
-                                                        <option value="2305557">Farhah Qalbina - 2305557</option>
-                                                        <option value="2304560">Bdn. Murni Jayanti S.Keb - 2304560</option>
-                                                        <option value="2303561">Wahyuni A.Md.Kep - 2303561</option>
-                                                        <option value="2305565">M AKBAR AL HAFIZ A.MD.KES - 2305565</option>
-                                                        <option value="2303563">WAHYU DESVI FHANIA.Md.KEP - 2303563</option>
-                                                        <option value="2303562">SESNITA A.Md.KEP - 2303562</option>
-                                                        <option value="2304564">SUHERIANI M.Keb - 2304564</option>
-                                                        <option value="2305569">Sarmila Erbina Ginting S.Kes - 2305569</option>
-                                                        <option value="2305571">Nurfadilla S.Kes - 2305571</option>
-                                                        <option value="2305572">Irfan Junaidi S.Kes - 2305572</option>
-                                                        <option value="2305568">Santi Fitria S.Kes - 2305568</option>
-                                                        <option value="2305570">Ayep Darsono A.Md OT.SE - 2305570</option>
-                                                        <option value="2306573">Fahrul Rozi - 2306573</option>
-                                                        <option value="2303575">Ns. Weny Amborowati, S.Kep - 2303575</option>
-                                                        <option value="2303576">Ns Asri Maslipha Wijayanti S.Kep - 2303576</option>
-                                                        <option value="2303577">Ns. Rinti Yani S.Kep - 2303577</option>
-                                                        <option value="2305578">Putri Karlina A.Md GZ - 2305578</option>
-                                                        <option value="2303580">NS. Yeni Marlina. S.Kep - 2303580</option>
-                                                        <option value="2306582">Sri Rahayu - 2306582</option>
-                                                        <option value="2306581">Nabil Ar. Rasyid Riyadi - 2306581</option>
-                                                        <option value="2303579">Ns. Nadilla Widiani. S.Kep - 2303579</option>
-                                                        <option value="2303584">Ns Tiara Indah Permata S.Kep - 2303584</option>
-                                                        <option value="2303585">Ns Afni Shintia S.Kep - 2303585</option>
-                                                        <option value="2306587">Agung Prayuda Susanto - 2306587</option>
-                                                        <option value="2306591">Ozie Sutra Cendana - 2306591</option>
-                                                        <option value="2303592">Putri Stefani A.Md.Kep - 2303592</option>
-                                                        <option value="2305593">Siti Salisa Mutohharoh S.Farm - 2305593</option>
-                                                        <option value="2302588">dr. Pitra Mukhlis Wardani - 2302588</option>
-                                                        <option value="2302589">dr. Dian Oktrianda - 2302589</option>
-                                                        <option value="2302590">dr. Martiana Fahriah - 2302590</option>
-                                                        <option value="2306596">TEDDY SAPUTRA - 2306596</option>
-                                                        <option value="2303599">Ns. Maryu Indra Dewi S.Kep - 2303599</option>
-                                                        <option value="2301594">dr. Evalazny Lubis Sp. Rad - 2301594</option>
-                                                        <option value="2306600">Rahmad Maulana - 2306600</option>
-                                                        <option value="2306601">Rahmita Sari Rambe - 2306601</option>
-                                                        <option value="2306602">Rofifah Rizda. S.Ak - 2306602</option>
-                                                        <option value="2306606">Achmad Muchsin S.T - 2306606</option>
-                                                        <option value="2306607">Fitri Amanah S.T - 2306607</option>
-                                                        <option value="2302605">dr Vinta Utami Amri - 2302605</option>
-                                                        <option value="2303609">Ns. Bambang Irawan s.Kep - 2303609</option>
-                                                        <option value="2306608">Muhammad Alrasyid - 2306608</option>
-                                                        <option value="2305612">Nadia Kusnadi. S.Farm - 2305612</option>
-                                                        <option value="2306614">M.Fahrezi Irdhi Akbar - 2306614</option>
-                                                        <option value="2306615">Pandu Julianro - 2306615</option>
-                                                        <option value="2306616">Rahmat Afif A.Md - 2306616</option>
-                                                        <option value="2306618">Riski Hidayat Pratama Nasution - 2306618</option>
-                                                        <option value="2306617">Eldino Adha - 2306617</option>
-                                                        <option value="2301603">dr Amanda Priska Diananti Sp M - 2301603</option>
-                                                        <option value="2302613">drg Tiola Elten Prashtilya - 2302613</option>
-                                                        <option value="2306620">Faisal Abid - 2306620</option>
-                                                        <option value="2303620">Ns. Lisa Indriani S.Kep - 2303620</option>
-                                                        <option value="2303622">Sabrina Dwina Putri A.Md.Kep - 2303622</option>
-                                                        <option value="2303624">Ns Elvida Putri S.Kep - 2303624</option>
-                                                        <option value="2303623">Kamisla Wati S. Md. Kep - 2303623</option>
-                                                        <option value="2306626">Meri Defrianita - 2306626</option>
-                                                        <option value="2306627">Muhammad Kurniadi Pratama - 2306627</option>
-                                                        <option value="2302619">dr. Olvhantiara Sukma - 2302619</option>
-                                                        <option value="2305628">Harly Michael A. Md. Kes - 2305628</option>
-                                                        <option value="2303630">Ns. Najarun Rojak Siregar, S.Kep - 2303630</option>
-                                                        <option value="2303629">Annayyah Fatihani Lubis Amd. Kep - 2303629</option>
-                                                        <option value="2306633">Al Ghiffari - 2306633</option>
-                                                        <option value="2306632">Joko Irawan - 2306632</option>
-                                                        <option value="2306635">Siska Angriani - 2306635</option>
-                                                        <option value="2406636">M. Mahfud Tri Handoko SE - 2406636</option>
-                                                        <option value="2406637">Annisa Fitria Zerni S.E - 2406637</option>
-                                                        <option value="2403638">Suganda Muda Sitompul AMK - 2403638</option>
-                                                        <option value="2403640">Windi Putri Suryani Amd Kep - 2403640</option>
-                                                        <option value="2403639">Ns. Rivi Maldanurman Putri. S.kep - 2403639</option>
-                                                        <option value="2403642">Ns. Vinalita De Ferfa S.Kep - 2403642</option>
-                                                        <option value="2405643">Regita Cahyani A.md. Kes.Rad - 2405643</option>
-                                                        <option value="2405644">Qurrati Aini S.Farm - 2405644</option>
-                                                        <option value="2405645">Titik Maryani A.md Farm - 2405645</option>
-                                                        <option value="2405647">Anggi Tri Ito P A.Md.Kes - 2405647</option>
-                                                        <option value="2404648">Ivo Lestari Amd.Keb - 2404648</option>
-                                                        <option value="2406650">Al Hidayat, SE - 2406650</option>
-                                                        <option value="2403651">Ns. Gita Apelia S.Kep - 2403651</option>
-                                                        <option value="2404652">Nengsi Oktoriyanda AM.Keb - 2404652</option>
-                                                        <option value="2405653">Apliana Aqidatul Izzah S.Tr Kes - 2405653</option>
-                                                        <option value="2405654">Rina Sofianti Amd.Kes - 2405654</option>
-                                                        <option value="2406656">Dora Yoris Dayanti. S.A.P - 2406656</option>
-                                                        <option value="2404657">Madia Lelyani Qoyum A.Md. Keb - 2404657</option>
-                                                        <option value="2403659">Sillvi Natasya A.Md. Kep - 2403659</option>
-                                                        <option value="2403662">Ns. Lasti Wahyuni S.Kep - 2403662</option>
-                                                        <option value="2403660">Devi Sartika Sianturi A.Md Kep - 2403660</option>
-                                                        <option value="2403665">Uzka Ismatullah. A.md.kep - 2403665</option>
-                                                        <option value="2403666">hifzhi A.Md Kep - 2403666</option>
-                                                        <option value="2406668">Thitri Yulia Aengely S.K.M - 2406668</option>
-                                                        <option value="2406669">Rena Dinata S.Sos - 2406669</option>
-                                                        <option value="2406670">Muhammad Habib Rizik - 2406670</option>
-                                                        <option value="2406671">Mely Dian Putri - 2406671</option>
-                                                        <option value="2402667">dr. Auni Afikah - 2402667</option>
-                                                        <option value="2405672">Aisyah S.Farm - 2405672</option>
-                                                        <option value="2403673">Yollanda Novetree Amd.Kep - 2403673</option>
-                                                        <option value="2403674">Amelia Rahelsa Amd.Kep - 2403674</option>
-                                                        <option value="2401675">dr Feiky Herfandi Soegistiono Sp. JP - 2401675</option>
-                                                        <option value="2403677">Reni Melliyana A.md. Keb - 2403677</option>
-                                                        <option value="2406678">Ramadhona Fitra. S.K.M. - 2406678</option>
-                                                        <option value="2403676">Natasya Honesty Tobing A.Md.Keb - 2403676</option>
-                                                        <option value="2406679">Deah Saputri - 2406679</option>
-                                                        <option value="2406680">Tasya Pragita S.Sos - 2406680</option>
-                                                        <option value="2406681">Ariq Fhaturrahman - 2406681</option>
-                                                        <option value="2404683">Yuliani A.Md. Keb - 2404683</option>
-                                                        <option value="2404682">Deliana Veronica S Amd Keb - 2404682</option>
-                                                        <option value="2406684">Muhammad Habib Pratama - 2406684</option>
-                                                        <option value="2403685">Mirnasari S.Kep - 2403685</option>
-                                                        <option value="2406687">Imam Maliki Pardede - 2406687</option>
-                                                        <option value="2406688">Izal Afandi - 2406688</option>
-                                                        <option value="2405689">Iqbal Syukri A md.Ftr - 2405689</option>
-                                                        <option value="2403690">Ns. Delvina S.kep - 2403690</option>
-                                                        <option value="2403691">Yolanda Magdalena Amd.Kep - 2403691</option>
-                                                        <option value="2403641">Fauzan Azmi S. Tr. Kes - 2403641</option>
-                                                        <option value="2305566">Ary Roma ZR S.Si - 2305566</option>
-                                                        <option value="2406693">Hermita - 2406693</option>
-                                                        <option value="2406692">Fikri Rahman - 2406692</option>
-                                                        <option value="2402686">dr. Sartika Astri Mareta - 2402686</option>
-                                                        <option value="2403694">Ns. Nia Fitriana S. Kep - 2403694</option>
-                                                        <option value="2403695">Sela Mutia Amd. Kep - 2403695</option>
-                                                        <option value="2403696">Nindya Febrihassri A.Md.Kep - 2403696</option>
-                                                        <option value="2406697">Laras Avisya S.Kom - 2406697</option>
-                                                        <option value="2406698">Melly Sintia Reski - 2406698</option>
-                                                        <option value="2406700">Bella Afifah - 2406700</option>
-                                                        <option value="2406702">Risma Wahyu Anisa Putri - 2406702</option>
-                                                        <option value="2406704">Alvin dwi pratama - 2406704</option>
-                                                        <option value="2401705">dr. Deni Saputra Sp. Rad - 2401705</option>
-                                                        <option value="2402699">dr Rizki Amanda Putra - 2402699</option>
-                                                        <option value="2403703">Ola heskia simangunsong amd. Kep - 2403703</option>
-                                                        <option value="2405707">Laura Yolanda SofyanAmd.Kes - 2405707</option>
-                                                        <option value="2406709">Rikehna yanti - 2406709</option>
-                                                        <option value="2405708">Asti sari br siregar Amd.Kes - 2405708</option>
-                                                        <option value="2406712">Rahmatul Annisa S.Kom - 2406712</option>
-                                                        <option value="2406711">Rijal Sholihin - 2406711</option>
-                                                        <option value="2403710">Laila Maisarah A.Md.Kep - 2403710</option>
-                                                        <option value="2403706">Novianda S Tr Kes - 2403706</option>
-                                                        <option value="2406713">Syafitri Fahera - 2406713</option>
-                                                        <option value="2406714">Adella putri firsalliaS.E - 2406714</option>
-                                                        <option value="2402715">dr. Fauzul Azmi - 2402715</option>
-                                                        <option value="2403717">Ns. Anggi Zulviani S.Kep - 2403717</option>
-                                                        <option value="2404718">Helmina Nova Cristina A.Md Keb - 2404718</option>
-                                                        <option value="2406719">Azizah Bismi Dalifia S.K.M - 2406719</option>
-                                                        <option value="2406720">Ainu Ramadhani - 2406720</option>
-                                                        <option value="2406721">Jihan Fauziah Ahmad S.Sos - 2406721</option>
-                                                        <option value="2404723">Zelvi Sucita Dewi A.Md. keb - 2404723</option>
-                                                        <option value="2404722">Bdn. Winda Maya Pebriani S.Keb - 2404722</option>
-                                                        <option value="2403724">Ns. Siti Nurhayatang S.Kep - 2403724</option>
-                                                        <option value="2403725">Ns. Ernita Simamora S.Kep - 2403725</option>
-                                                        <option value="2403716">Bambang Irawan AMK - 2403716</option>
-                                                        <option value="2403726">Rohma Sulistiawati Amd.Kep - 2403726</option>
-                                                        <option value="2404727">Bd.Cici Paramita br.Sitompul S.Keb - 2404727</option>
-                                                        <option value="2404729">Windy Mustika Riati Amd. Keb - 2404729</option>
-                                                        <option value="2403733">Ns. Putri Simbolon S.Tr Kep - 2403733</option>
-                                                        <option value="2403729">Annisa Ayanti A.Md. Kep - 2403729</option>
-                                                        <option value="2403732">Devi Aurelia AMd.Kep - 2403732</option>
-                                                        <option value="2403730">Dindriana Azzahra A.Md.Kep - 2403730</option>
-                                                        <option value="2403731">Feni fitria ningsih AMD.kep. - 2403731</option>
-                                                        <option value="2405734">Arifki agung salendra A.md.rad - 2405734</option>
-                                                        <option value="2406735">Bunga Riwanda - 2406735</option>
-                                                        <option value="2403736">Ns. Agnes Jessica Lubis S. Kep - 2403736</option>
-                                                        <option value="2403737">Ns. Thessa Arine Putri S. Kep - 2403737</option>
-                                                        <option value="2403738">Riska Yandani A.Md. Kep - 2403738</option>
-                                                        <option value="2405739">Roma Parsaulian S. Farm - 2405739</option>
-                                                        <option value="2403740">Launan Rivai Sormin A. Md. Kep - 2403740</option>
-                                                        <option value="2403741">Beatrix Nababan A. Md. Kep - 2403741</option>
-                                                        <option value="2403742">Muhammad Fauzan Al Gafary A. Md. Kep - 2403742</option>
-                                                </select>
-                  </div>
-                      	            <div class="form-group">
-    	                <label>Nama lengkap</label>
-    	                <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Nama lengkap (optional)" value="dr. Ilham Akbar" />
-    	            </div>
-					        <div class="form-group">
-    	                <label>Foto</label>
-          						<div>
-          							<img src="http://192.168.102.13/Edokter/uploads/users/avatar63745f03a096e.png" width="96" height="96" class="img-thumbnail" id="photoPreview" style="cursor:pointer;" onclick="$('input[name=photo]').click()" />
-          							<input type="file" name="photo" class="form-control hidden" />
-          						</div>
-    	            </div>
-                  <div class="form-group">
-      	                <label>Deskripsi</label>
-      	                <textarea class="form-control" name="description" placeholder="Deskripsi (optional)" rows="6"></textarea>
-    	            </div>
-    	            <div class="form-group">
-    	                <label>Email</label>
-    	                <input type="email" name="email" class="form-control" required value="contoh@gmail.com" />
-    	            </div>
-    	            <div class="form-group">
-    	                <label>Kata kunci <a href="#" id="passwordChange" class="btn btn-default btn-xs">Ubah</a></label>
-    	                <input type="password" name="password" class="form-control" pattern=".{5,}" title="Kata kunci terlalu pendek" value="********" placeholder="Kata kunci baru" disabled />
-    	            </div>
-                  <div class="form-group">
-                      <label>Role</label>
-                      <select name="role" class="form-control">
-                                                                          <option value="pengguna">pengguna</option>
-                                                  <option value="kasir">kasir</option>
-                                                  <option value="rekammedis">rekammedis</option>
-                                                  <option value="radiologi">radiologi</option>
-                                                  <option value="laboratorium">laboratorium</option>
-                                                  <option value="paramedis">paramedis</option>
-                                                  <option value="apoteker">apoteker</option>
-                                                  <option value="medis" selected>medis</option>
-                                                  <option value="manajemen">manajemen</option>
-                                                  <option value="admin">admin</option>
-                                                                      </select>
-                  </div>
-                                    <div class="form-group">
-                      <label>Capability</label>
-                      <select name="cap[]" multiple class="form-control">
-                                                  <option value="-" >- - -</option>
-                                                  <option value="IGDK" selected>IGD - IGDK</option>
-                                                  <option value="U0020" >LABORATORIUM - U0020</option>
-                                                  <option value="U0023" >Perinatologi - U0023</option>
-                                                  <option value="U0017" >POLI IMUNISASI - U0017</option>
-                                                  <option value="U0016" >POLI ORTHOPEDI - U0016</option>
-                                                  <option value="U0053" >POLI REHABILITASI MEDIK - U0053</option>
-                                                  <option value="U0002" >Poliklinik Anak - U0002</option>
-                                                  <option value="U0025" >Poliklinik Audiometri - U0025</option>
-                                                  <option value="U0004" >Poliklinik Bedah - U0004</option>
-                                                  <option value="U0022" >Poliklinik Gigi - U0022</option>
-                                                  <option value="U0010" >Poliklinik Gigi & Mulut - U0010</option>
-                                                  <option value="U0012" >Poliklinik Jantung - U0012</option>
-                                                  <option value="U0001" >Poliklinik Kandungan - U0001</option>
-                                                  <option value="U0024" >Poliklinik KIA - U0024</option>
-                                                  <option value="U0006" >Poliklinik Kulit & Kelamin - U0006</option>
-                                                  <option value="U0005" >Poliklinik Mata - U0005</option>
-                                                  <option value="U0018" >Poliklinik Paru - U0018</option>
-                                                  <option value="U0019" >Poliklinik Paru - U0019</option>
-                                                  <option value="U0003" >Poliklinik Penyakit Dalam - U0003</option>
-                                                  <option value="U0008" >Poliklinik Radiologi - U0008</option>
-                                                  <option value="U0007" >Poliklinik Syaraf / Neurologi - U0007</option>
-                                                  <option value="U0011" >Poliklinik THT - U0011</option>
-                                                  <option value="U0009" >Poliklinik Umum - U0009</option>
-                                                  <option value="U0026" >Spirometri - U0026</option>
-                                                  <option value="U0021" selected>VK - U0021</option>
-                                                  <option value="0400" >- - 0400</option>
-                                                  <option value="0401" >- - 0401</option>
-                                                  <option value="0402" >- - 0402</option>
-                                                  <option value="0403" >- - 0403</option>
-                                                  <option value="0404" >- - 0404</option>
-                                                  <option value="0405" >- - 0405</option>
-                                                  <option value="AP" >Apotek - AP</option>
-                                                  <option value="Far2" >Apotek Rawat Inap - Far2</option>
-                                                  <option value="B0022" selected>BOUGENVILLE - B0022</option>
-                                                  <option value="B0049" selected>BOUGENVILLE* - B0049</option>
-                                                  <option value="B0023" selected>CEMPAKA - B0023</option>
-                                                  <option value="CE040" selected>CEMPAKA* - CE040</option>
-                                                  <option value="B0060" >CS - B0060</option>
-                                                  <option value="B0028" >CSSD - B0028</option>
-                                                  <option value="B0021" selected>DAYLILI - B0021</option>
-                                                  <option value="B0046" selected>DAYLILI* - B0046</option>
-                                                  <option value="Far1" >Farmasi Gudang - Far1</option>
-                                                  <option value="Far3" >Farmasi Ranap & Khusus - Far3</option>
-                                                  <option value="B0067" >Gardener - B0067</option>
-                                                  <option value="B0041" >GIZI - B0041</option>
-                                                  <option value="B0029" >GUDANG RETUR - B0029</option>
-                                                  <option value="HCU" selected>HCU - HCU</option>
-                                                  <option value="B0047" selected>HCU* - B0047</option>
-                                                  <option value="ICU" selected>ICU - ICU</option>
-                                                  <option value="B0048" selected>ICU* - B0048</option>
-                                                  <option value="IGD" >IGD - IGD</option>
-                                                  <option value="B0042" selected>ISOLASI - B0042</option>
-                                                  <option value="B0065" >IT - B0065</option>
-                                                  <option value="B0003" >Kamar Bersalin - B0003</option>
-                                                  <option value="B0004" >Kamar ICU - B0004</option>
-                                                  <option value="B0006" >Kamar Kelas I - B0006</option>
-                                                  <option value="B0001" >Kamar Kelas II - B0001</option>
-                                                  <option value="B0002" >Kamar Kelas III - B0002</option>
-                                                  <option value="VIP" >Kamar Kelas VIP - VIP</option>
-                                                  <option value="VVIP" >Kamar Kelas VVIP - VVIP</option>
-                                                  <option value="B0005" >Kamar NICU - B0005</option>
-                                                  <option value="KO" >Kamar Operasi - KO</option>
-                                                  <option value="PERIN" >KAMAR PERINATOLOGI - PERIN</option>
-                                                  <option value="B0050" >KAMAR PERINATOLOGI* - B0050</option>
-                                                  <option value="KP" >Kamar PICU - KP</option>
-                                                  <option value="B0043" >Laboratorium - B0043</option>
-                                                  <option value="B0057" >LAUNDRY - B0057</option>
-                                                  <option value="B0056" >LIMBAH - B0056</option>
-                                                  <option value="B0066" >LOGISTIK - B0066</option>
-                                                  <option value="B0027" >MANAJEMEN - B0027</option>
-                                                  <option value="B0030" >MCU - B0030</option>
-                                                  <option value="B0026" >PEMINJAMAN - B0026</option>
-                                                  <option value="B0059" >PENYAKIT DALAM - B0059</option>
-                                                  <option value="B0031" >PERINATOLOGI - B0031</option>
-                                                  <option value="B0033" >PLNK ANAK - B0033</option>
-                                                  <option value="B0034" >PLNK DR. DARWIN - DR. MADUMA  - B0034</option>
-                                                  <option value="B0035" >PLNK DR. FITRI - B0035</option>
-                                                  <option value="B0038" >PLNK DR. ORTHOPEDI - B0038</option>
-                                                  <option value="B0036" >PLNK DR. ROSENO - B0036</option>
-                                                  <option value="B0037" >PLNK DR. THT - B0037</option>
-                                                  <option value="B0044" >PLNK JANTUNG - B0044</option>
-                                                  <option value="B0032" >PLNK PARU - B0032</option>
-                                                  <option value="B0045" >PLNK SARAF - B0045</option>
-                                                  <option value="B0061" >POLI GIGI - B0061</option>
-                                                  <option value="B0058" >POLI MATA - B0058</option>
-                                                  <option value="B0025" >POLIKLINIK BEDAH - B0025</option>
-                                                  <option value="B0039" >PSIOTERAPI - B0039</option>
-                                                  <option value="B0040" >RADIOLOGI - B0040</option>
-                                                  <option value="B0064" >Sanitasi - B0064</option>
-                                                  <option value="B0063" >UPSRS - B0063</option>
-                                                  <option value="B0062" >VK - B0062</option>
-                                              </select>
-                  </div>
-                      	            <div class="form-group">
-    	                <label>Akses</label>
-    	                <select name="access[]" multiple class="form-control" data-keep-open="true" data-use-search="true" data-use-dimmer="false" data-options-height="126px"  required>
-    	                	    	                	<option value="settings" data-font="<i class='fa fa-wrench'></i>" >Pengaturan</option>
-    	                	    	                	<option value="master" data-font="<i class='fa fa-cubes'></i>" >Master Data</option>
-    	                	    	                	<option value="pasien" data-font="<i class='fa fa-users'></i>" >Pendaftaran Pasien</option>
-    	                	    	                	<option value="rawat_jalan" data-font="<i class='fa fa-wheelchair'></i>" >Rawat Jalan</option>
-    	                	    	                	<option value="kasir_rawat_jalan" data-font="<i class='fa fa-money'></i>" >Kasir Rawat Jalan</option>
-    	                	    	                	<option value="kepegawaian" data-font="<i class='fa fa-group'></i>" >Kepegawaian</option>
-    	                	    	                	<option value="farmasi" data-font="<i class='fa fa-medkit'></i>" >Farmasi</option>
-    	                	    	                	<option value="users" data-font="<i class='fa fa-user'></i>" >Pengguna</option>
-    	                	    	                	<option value="modules" data-font="<i class='fa fa-plug'></i>" >Modul-Modul</option>
-    	                	    	                	<option value="wagateway" data-font="<i class='fa fa-whatsapp'></i>" >WA Gateway</option>
-    	                	    	                	<option value="apotek_ralan" data-font="<i class='fa fa-shopping-cart'></i>" >Apotek Ralan</option>
-    	                	    	                	<option value="dokter_ralan" data-font="<i class='fa fa-user-md'></i>" >Dokter Ralan</option>
-    	                	    	                	<option value="igd" data-font="<i class='fa fa-ambulance'></i>" selected>IGD</option>
-    	                	    	                	<option value="dokter_igd" data-font="<i class='fa fa-user-md'></i>" selected>Dokter IGD</option>
-    	                	    	                	<option value="laboratorium" data-font="<i class='fa fa-flask'></i>" >Laboratorium</option>
-    	                	    	                	<option value="radiologi" data-font="<i class='fa fa-film'></i>" >Radiologi</option>
-    	                	    	                	<option value="icd_10" data-font="<i class='fa fa-code'></i>" >ICD 10</option>
-    	                	    	                	<option value="rawat_inap" data-font="<i class='fa fa-hotel'></i>" >Rawat Inap</option>
-    	                	    	                	<option value="apotek_ranap" data-font="<i class='fa fa-shopping-cart'></i>" >Apotek Ranap</option>
-    	                	    	                	<option value="dokter_ranap" data-font="<i class='fa fa-user-md'></i>" selected>Dokter Ranap</option>
-    	                	    	                	<option value="kasir_rawat_inap" data-font="<i class='fa fa-money'></i>" >Kasir Rawat Inap</option>
-    	                	    	                	<option value="operasi" data-font="<i class='fa fa-bolt'></i>" >Operasi</option>
-    	                	    	                	<option value="anjungan" data-font="<i class='fa fa-desktop'></i>" >Anjungan</option>
-    	                	    	                	<option value="api" data-font="<i class='fa fa-database'></i>" >API</option>
-    	                	    	                	<option value="jkn_mobile" data-font="<i class='fa fa-tasks'></i>" >JKN Mobile</option>
-    	                	    	                	<option value="vclaim" data-font="<i class='fa fa-database'></i>" >VClaim Request</option>
-    	                	    	                	<option value="keuangan" data-font="<i class='fa fa-money'></i>" >Keuangan</option>
-    	                	    	                	<option value="manajemen" data-font="<i class='fa fa-dashboard'></i>" >Manajemen</option>
-    	                	    	                	<option value="presensi" data-font="<i class='fa fa-user-o'></i>" >Presensi</option>
-    	                	    	                	<option value="vedika" data-font="<i class='fa fa-code'></i>" >Vedika</option>
-    	                	    	                	<option value="profil" data-font="<i class='fa fa-address-book'></i>" selected>Profil</option>
-    	                	    	                	<option value="orthanc" data-font="<i class='fa fa-bolt'></i>" >Orthanc</option>
-    	                	    	                	<option value="veronisa" data-font="<i class='fa fa-medkit'></i>" >Veronisa</option>
-    	                	    	                	<option value="icd_9" data-font="<i class='fa fa-code'></i>" >ICD 9</option>
-    	                	    	                	<option value="afm" data-font="<i class='fa fa-laptop'></i>" >AFM</option>
-    	                	    	                	<option value="bridging_hfis" data-font="<i class='fa fa-shield'></i>" >Bridging HFIS</option>
-    	                	    	                	<option value="darurat_stok" data-font="<i class='fa fa-code'></i>" >Darurat Stok</option>
-    	                	    	                	<option value="detail_pemberian_obat" data-font="<i class='fa fa-code'></i>" >Detail Pemberian Obat</option>
-    	                	    	                	<option value="icare" data-font="<i class='fa fa-plus-square'></i>" >iCare</option>
-    	                	    	                	<option value="inventaris" data-font="<i class='fa fa-cog'></i>" >Inventaris</option>
-    	                	    	                	<option value="jkn_mobile_fktp" data-font="<i class='fa fa-tasks'></i>" >JKN Mobile FKTP</option>
-    	                	    	                	<option value="laporan_bpjs" data-font="<i class='fa fa-code'></i>" >Laporan BPJS</option>
-    	                	    	                	<option value="log_antrian_taskid" data-font="<i class='fa fa-code'></i>" >Log Antrian TaskID</option>
-    	                	    	                	<option value="pcare" data-font="<i class='fa fa-database'></i>" >Bridging PCare</option>
-    	                	    	                	<option value="penjualan" data-font="<i class='fa fa-cart-plus'></i>" >Penjualan</option>
-    	                	    	                	<option value="riwayat_barang_medis" data-font="<i class='fa fa-code'></i>" >Riwayat Barang Medis</option>
-    	                	    	                	<option value="satu_sehat" data-font="<i class='fa fa-heartbeat'></i>" >Satu Sehat</option>
-    	                	    	                	<option value="surat_rujukan" data-font="<i class='fa fa-code'></i>" >Surat Rujukan</option>
-    	                	    	                	<option value="surat_sakit" data-font="<i class='fa fa-code'></i>" >Surat Sakit</option>
-    	                	    	                	<option value="surat_sehat" data-font="<i class='fa fa-code'></i>" >Surat Sehat</option>
-    	                	    	                	<option value="utd" data-font="<i class='fa fa-heart'></i>" >UTD</option>
-    	                	    	                	<option value="website" data-font="<i class='fa fa-pencil-square'></i>" >Website</option>
-    	                	    	                </select>
-    	            </div>
-    	            <div class="form-group">
-    	                <input type="submit" name="save" class="btn btn-primary" value="Simpan" />
-    	            </div>
-                </fieldset>
-            </form>
+            <label for="" class="col-sm-2 control-label">Jam</label>
+            <div class="col-sm-3">
+              <input type="text" id="jam_masuk" name="jam_masuk" class="form-control jam" value="22:42:20">
             </div>
+          </div>
+          <div class="form-group" id="tanggal_keluar">
+            <label for="" class="col-sm-3 control-label">Tanggal Keluar</label>
+            <div class="col-sm-4">
+              <input type="text" id="tgl_keluar" name="tgl_keluar" class="form-control tanggal" value="0000-00-00">
+            </div>
+            <label for="" class="col-sm-2 control-label">Jam</label>
+            <div class="col-sm-3">
+              <input type="text" id="jam_keluar" name="jam_keluar" class="form-control jam" value="00:00:00">
+            </div>
+          </div>
+          <div class="form-group" id="cari_pasien">
+            <label for="pasien" class="col-sm-3 control-label">Pasien</label>
+            <div class="col-sm-9">
+              <input type="text" name="pasien" class="form-control" placeholder="Cari nama pasien/nomor rekam medik/nomor rawat" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label">Kamar</label>
+            <div class="col-sm-5">
+              <select class="form-control" name="kd_kamar">
+                                <option value="A101 K VIP-01">DAYLILI - A101 K VIP-01</option>
+                                <option value="A101 K2-RA 01">DAYLILI - A101 K2-RA 01</option>
+                                <option value="A101 K2-RA 02">DAYLILI - A101 K2-RA 02</option>
+                                <option value="A101 K2-RA 03">DAYLILI - A101 K2-RA 03</option>
+                                <option value="A103 K1-RA 02">DAYLILI - A103 K1-RA 02</option>
+                                <option value="A104 K3-RA 02">DAYLILI - A104 K3-RA 02</option>
+                                <option value="A105 K3-RA 01">DAYLILI - A105 K3-RA 01</option>
+                                <option value="A401 K VIP-01">DAYLILI - A401 K VIP-01</option>
+                                <option value="A402 K1-01   ">DAYLILI - A402 K1-01   </option>
+                                <option value="A402 K1-02   ">DAYLILI - A402 K1-02   </option>
+                                <option value="A403 K1-01   ">DAYLILI - A403 K1-01   </option>
+                                <option value="A403 K1-02   ">DAYLILI - A403 K1-02   </option>
+                                <option value="A404 K1-01   ">DAYLILI - A404 K1-01   </option>
+                                <option value="A404 K1-02   ">DAYLILI - A404 K1-02   </option>
+                                <option value="A405 K2-01   ">DAYLILI - A405 K2-01   </option>
+                                <option value="A405 K2-02   ">DAYLILI - A405 K2-02   </option>
+                                <option value="A405 K2-03   ">DAYLILI - A405 K2-03   </option>
+                                <option value="A406 K3-01   ">DAYLILI - A406 K3-01   </option>
+                                <option value="A406 K3-02   ">DAYLILI - A406 K3-02   </option>
+                                <option value="A406 K3-03   ">DAYLILI - A406 K3-03   </option>
+                                <option value="A406 K3-04">DAYLILI - A406 K3-04</option>
+                                <option value="B201 S  VIP 01">BOUGENVILLE - B201 S  VIP 01</option>
+                                <option value="B202 K VIP 01 ">BOUGENVILLE - B202 K VIP 01 </option>
+                                <option value="B203 K VIP 01">BOUGENVILLE - B203 K VIP 01</option>
+                                <option value="B204 K1-01   ">BOUGENVILLE - B204 K1-01   </option>
+                                <option value="B204 K1-02   ">BOUGENVILLE - B204 K1-02   </option>
+                                <option value="B205 K2-01   ">BOUGENVILLE - B205 K2-01   </option>
+                                <option value="B205 K2-02   ">BOUGENVILLE - B205 K2-02   </option>
+                                <option value="B206 K1-01   ">BOUGENVILLE - B206 K1-01   </option>
+                                <option value="B206 K1-02   ">BOUGENVILLE - B206 K1-02   </option>
+                                <option value="B207 K1-01   ">BOUGENVILLE - B207 K1-01   </option>
+                                <option value="B207 K1-02   ">BOUGENVILLE - B207 K1-02   </option>
+                                <option value="B208 K2-01   ">BOUGENVILLE - B208 K2-01   </option>
+                                <option value="B208 K2-02   ">BOUGENVILLE - B208 K2-02   </option>
+                                <option value="B208 K2-03   ">BOUGENVILLE - B208 K2-03   </option>
+                                <option value="B209 K2-01   ">BOUGENVILLE - B209 K2-01   </option>
+                                <option value="B209 K2-02   ">BOUGENVILLE - B209 K2-02   </option>
+                                <option value="B209 K2-03   ">BOUGENVILLE - B209 K2-03   </option>
+                                <option value="B210 K3-01   ">BOUGENVILLE - B210 K3-01   </option>
+                                <option value="B210 K3-02   ">BOUGENVILLE - B210 K3-02   </option>
+                                <option value="B210 K3-03   ">BOUGENVILLE - B210 K3-03   </option>
+                                <option value="B210 K3-04   ">BOUGENVILLE - B210 K3-04   </option>
+                                <option value="B210 K3-05   ">BOUGENVILLE - B210 K3-05   </option>
+                                <option value="B210 K3-06   ">BOUGENVILLE - B210 K3-06   </option>
+                                <option value="B210 K3-07   ">BOUGENVILLE - B210 K3-07   </option>
+                                <option value="B210 K3-08   ">BOUGENVILLE - B210 K3-08   </option>
+                                <option value="C301 S VIP 01">CEMPAKA - C301 S VIP 01</option>
+                                <option value="C302 K VIP 01">CEMPAKA - C302 K VIP 01</option>
+                                <option value="C303 K VIP 01">CEMPAKA - C303 K VIP 01</option>
+                                <option value="C304 K1-01   ">CEMPAKA - C304 K1-01   </option>
+                                <option value="C304 K1-02   ">CEMPAKA - C304 K1-02   </option>
+                                <option value="C305 K2-01   ">CEMPAKA - C305 K2-01   </option>
+                                <option value="C305 K2-02   ">CEMPAKA - C305 K2-02   </option>
+                                <option value="C306 K1-01   ">CEMPAKA - C306 K1-01   </option>
+                                <option value="C306 K1-02   ">CEMPAKA - C306 K1-02   </option>
+                                <option value="C307 K1-01   ">CEMPAKA - C307 K1-01   </option>
+                                <option value="C307 K1-02   ">CEMPAKA - C307 K1-02   </option>
+                                <option value="C308 K3-01   ">CEMPAKA - C308 K3-01   </option>
+                                <option value="C308 K3-02   ">CEMPAKA - C308 K3-02   </option>
+                                <option value="C308 K3-03   ">CEMPAKA - C308 K3-03   </option>
+                                <option value="C309 K3-01   ">CEMPAKA - C309 K3-01   </option>
+                                <option value="C309 K3-02   ">CEMPAKA - C309 K3-02   </option>
+                                <option value="C309 K3-03   ">CEMPAKA - C309 K3-03   </option>
+                                <option value="C310 K1-01   ">CEMPAKA - C310 K1-01   </option>
+                                <option value="C311 K3-01   ">CEMPAKA - C311 K3-01   </option>
+                                <option value="C311 K3-02   ">CEMPAKA - C311 K3-02   </option>
+                                <option value="C311 K3-03   ">CEMPAKA - C311 K3-03   </option>
+                                <option value="C311 K3-04   ">CEMPAKA - C311 K3-04   </option>
+                                <option value="C311 K3-05   ">CEMPAKA - C311 K3-05   </option>
+                                <option value="C311 K3-06   ">CEMPAKA - C311 K3-06   </option>
+                                <option value="HCU03">HCU - HCU03</option>
+                                <option value="HCU04">HCU - HCU04</option>
+                                <option value="ICU01">ICU - ICU01</option>
+                                <option value="ICU02">ICU - ICU02</option>
+                                <option value="ISO01" selected>ISOLASI - ISO01</option>
+                                <option value="K0000084">CEMPAKA - K0000084</option>
+                                <option value="K0000085">CEMPAKA* - K0000085</option>
+                                <option value="K0000086">BOUGENVILLE* - K0000086</option>
+                                <option value="K0000087">BOUGENVILLE* - K0000087</option>
+                                <option value="K0000088">CEMPAKA - K0000088</option>
+                                <option value="K0000089">CEMPAKA - K0000089</option>
+                                <option value="K0000090">DAYLILI* - K0000090</option>
+                                <option value="K0000091">CEMPAKA* - K0000091</option>
+                                <option value="K0000092">CEMPAKA - K0000092</option>
+                                <option value="K0000094">CEMPAKA* - K0000094</option>
+                                <option value="K0000095">CEMPAKA* - K0000095</option>
+                                <option value="K0000096">CEMPAKA* - K0000096</option>
+                                <option value="K0000097">CEMPAKA* - K0000097</option>
+                                <option value="K0000098">CEMPAKA* - K0000098</option>
+                                <option value="K0000099">CEMPAKA* - K0000099</option>
+                                <option value="K0000100">CEMPAKA* - K0000100</option>
+                                <option value="K0000103">CEMPAKA* - K0000103</option>
+                                <option value="K0000105">DAYLILI* - K0000105</option>
+                                <option value="K0000107">CEMPAKA* - K0000107</option>
+                                <option value="K0000108">CEMPAKA - K0000108</option>
+                                <option value="K0000111">CEMPAKA* - K0000111</option>
+                                <option value="K0000112">DAYLILI* - K0000112</option>
+                                <option value="K0000113">DAYLILI* - K0000113</option>
+                                <option value="K0000114">DAYLILI* - K0000114</option>
+                                <option value="K0000115">CEMPAKA* - K0000115</option>
+                                <option value="K0000116">DAYLILI* - K0000116</option>
+                                <option value="K0000117">CEMPAKA* - K0000117</option>
+                                <option value="K0000118">HCU* - K0000118</option>
+                                <option value="K0000119">BOUGENVILLE* - K0000119</option>
+                                <option value="K0000120">BOUGENVILLE* - K0000120</option>
+                                <option value="K0000121">ICU* - K0000121</option>
+                                <option value="K0000122">BOUGENVILLE* - K0000122</option>
+                                <option value="K0000123">BOUGENVILLE* - K0000123</option>
+                                <option value="K0000124">BOUGENVILLE* - K0000124</option>
+                                <option value="K0000125">BOUGENVILLE* - K0000125</option>
+                                <option value="K0000126">HCU* - K0000126</option>
+                                <option value="K0000127">BOUGENVILLE* - K0000127</option>
+                                <option value="K0000128">BOUGENVILLE* - K0000128</option>
+                                <option value="K0000129">BOUGENVILLE* - K0000129</option>
+                                <option value="K0000130">BOUGENVILLE* - K0000130</option>
+                                <option value="K0000131">BOUGENVILLE* - K0000131</option>
+                                <option value="K0000132">BOUGENVILLE* - K0000132</option>
+                                <option value="K0000133">BOUGENVILLE* - K0000133</option>
+                                <option value="K0000134">HCU* - K0000134</option>
+                                <option value="K0000135">BOUGENVILLE* - K0000135</option>
+                                <option value="K0000136">BOUGENVILLE* - K0000136</option>
+                                <option value="K0000137">BOUGENVILLE* - K0000137</option>
+                                <option value="K0000138">BOUGENVILLE* - K0000138</option>
+                                <option value="K0000139">BOUGENVILLE* - K0000139</option>
+                                <option value="K0000140">BOUGENVILLE* - K0000140</option>
+                                <option value="K0000141">BOUGENVILLE* - K0000141</option>
+                                <option value="K0000142">BOUGENVILLE* - K0000142</option>
+                                <option value="K0000143">CEMPAKA* - K0000143</option>
+                                <option value="K0000144">CEMPAKA* - K0000144</option>
+                                <option value="K0000145">CEMPAKA* - K0000145</option>
+                                <option value="K0000146">CEMPAKA* - K0000146</option>
+                                <option value="K0000147">CEMPAKA* - K0000147</option>
+                                <option value="K0000148">CEMPAKA* - K0000148</option>
+                                <option value="K0000149">DAYLILI* - K0000149</option>
+                                <option value="K0000150">CEMPAKA* - K0000150</option>
+                                <option value="K0000151">ICU* - K0000151</option>
+                                <option value="K0000152">DAYLILI* - K0000152</option>
+                                <option value="K0000153">CEMPAKA* - K0000153</option>
+                                <option value="K0000154">KAMAR PERINATOLOGI* - K0000154</option>
+                                <option value="K0000155">CEMPAKA* - K0000155</option>
+                                <option value="K0000156">CEMPAKA* - K0000156</option>
+                                <option value="K0000162">CEMPAKA* - K0000162</option>
+                                <option value="K0000163">CEMPAKA* - K0000163</option>
+                                <option value="K0000166">BOUGENVILLE* - K0000166</option>
+                                <option value="K0000169">DAYLILI* - K0000169</option>
+                                <option value="K0000170">DAYLILI* - K0000170</option>
+                                <option value="K0000171">CEMPAKA* - K0000171</option>
+                                <option value="K0000172">CEMPAKA* - K0000172</option>
+                                <option value="K0000173">CEMPAKA* - K0000173</option>
+                                <option value="K0000174">CEMPAKA* - K0000174</option>
+                                <option value="K0000175">CEMPAKA* - K0000175</option>
+                                <option value="K0000176">CEMPAKA* - K0000176</option>
+                                <option value="K0000177">DAYLILI* - K0000177</option>
+                                <option value="K0000178">BOUGENVILLE* - K0000178</option>
+                                <option value="K0000179">CEMPAKA* - K0000179</option>
+                                <option value="K0000180">CEMPAKA* - K0000180</option>
+                                <option value="K0000181">BOUGENVILLE* - K0000181</option>
+                                <option value="K0000182">ICU* - K0000182</option>
+                                <option value="K0000184">ICU* - K0000184</option>
+                                <option value="PERINA 01    ">PERINATOLOGI - PERINA 01    </option>
+                                <option value="PERINA 02    ">PERINATOLOGI - PERINA 02    </option>
+                                <option value="PERINA 03    ">PERINATOLOGI - PERINA 03    </option>
+                                <option value="PERINA 04    ">PERINATOLOGI - PERINA 04    </option>
+                                <option value="PERINA 05    ">PERINATOLOGI - PERINA 05    </option>
+                                <option value="PERINA 06    ">PERINATOLOGI - PERINA 06    </option>
+                                <option value="PERINA 07">KAMAR PERINATOLOGI* - PERINA 07</option>
+                                <option value="PERINA 08">KAMAR PERINATOLOGI* - PERINA 08</option>
+                                <option value="PERINA 09">KAMAR PERINATOLOGI* - PERINA 09</option>
+                                <option value="PERINA 10">KAMAR PERINATOLOGI* - PERINA 10</option>
+                                <option value="PERINA 11">KAMAR PERINATOLOGI* - PERINA 11</option>
+                              </select>
+            </div>
+            <label for="" class="col-sm-2 control-label">Lama</label>
+            <div class="col-sm-2">
+              <input type="text" name="lama" class="form-control" value="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="id_dokter" class="col-sm-3 control-label">Dokter</label>
+            <div class="col-sm-9">
+              <select class="form-control" name="kd_dokter">
+                                <option value="-">-</option>
+                                <option value="0601002">dr. R. Trin Suciati Sp.A</option>
+                                <option value="1301033">dr. Darwin NA. Sp.OG</option>
+                                <option value="1302032">drg. Mona Lolita</option>
+                                <option value="1501042">dr. Ruri Gusandi Sp.B</option>
+                                <option value="1502044">dr. Muhammad Yusuf</option>
+                                <option value="1601052">dr. H. R. Roseno Sarjanto. Sp.OG</option>
+                                <option value="1601053">dr. Mufti Andri MKed.An Sp.An</option>
+                                <option value="1601055">dr. Fitry Adelia Sy. MKed.DV SpDV</option>
+                                <option value="1602051">dr. Riri Pratiwi. S</option>
+                                <option value="1701081">dr. Teddy Ardan, Sp.A</option>
+                                <option value="1701101">dr. Intan Yuliasari M.SC Sp.S</option>
+                                <option value="1701114">dr. Gumana Uhum Panangian Sitompul Sp.B</option>
+                                <option value="1701115">dr. Yelvita Roza Sp.THT-KL</option>
+                                <option value="1801144">dr. Hermadia Sp.PD</option>
+                                <option value="1801149">dr. Rusdayani Sp. M</option>
+                                <option value="1801150">dr. Yuli Cardo Ardiles Sp.PD</option>
+                                <option value="1801194" selected>dr. Romaito Nasution Sp. P</option>
+                                <option value="1802202">dr. Syarafina Raihan MARS</option>
+                                <option value="1901289">dr. Iin Kamelia Rambe Sp. K.F.R</option>
+                                <option value="2001327">dr. Fanel Putra Sp.N</option>
+                                <option value="2001328">dr. Maduma Octha Marini Simarmata Sp.OG</option>
+                                <option value="2002313">dr. Wiwing Marisya</option>
+                                <option value="2002336">dr. Dea Oktoviani</option>
+                                <option value="2101355">dr. Aidi Nasrul Sp.PD</option>
+                                <option value="2101366">dr. Rafki Hidayat MKed.SURG Sp.B</option>
+                                <option value="2101371">dr. Farah Soraya Effendi Sp.PD</option>
+                                <option value="2101372">dr. Taufik Abdi, Sp. P. K</option>
+                                <option value="2101379">Dr. Christian Yosaputra Sp.J.P</option>
+                                <option value="2102342">dr. Rafisha Putri Felladira</option>
+                                <option value="2102373">dr. Rahmat Adil</option>
+                                <option value="2102374">dr. Chyntia Theodora Aprilianti</option>
+                                <option value="2201412">dr. Cakra Andhika Sp. OT</option>
+                                <option value="2201469">dr. Wicak Kunto Wibowo MKed.AN Sp.An</option>
+                                <option value="2201479">dr. Muhammad Fadlan Hamzah Sp. Rad M. Sc</option>
+                                <option value="2202424">dr. Dini Dwi Nabilah</option>
+                                <option value="2202425">dr. Reza Sukmana</option>
+                                <option value="2202459">dr. Laila Syifa Rahmi</option>
+                                <option value="2202468">dr. Ilham Akbar</option>
+                                <option value="2202496">dr. Deastri Pratiwi MARS</option>
+                                <option value="2202497">dr. Sandriolahdisa</option>
+                                <option value="2301594">dr. Evalazny Lubis Sp. Rad</option>
+                                <option value="2301603">dr Amanda Priska Diananti Sp M</option>
+                                <option value="2302588">dr. Pitra Mukhlis Wardani</option>
+                                <option value="2302589">dr. Dian Oktrianda</option>
+                                <option value="2302590">dr. Martiana Fahriah</option>
+                                <option value="2302605">dr Vinta Utami Amri</option>
+                                <option value="2302613">drg Tiola Elten Prashtilya</option>
+                                <option value="2302619">dr. Olvhantiara Sukma</option>
+                                <option value="2401675">dr Feiky Herfandi Soegistiono Sp. JP</option>
+                                <option value="2401705">dr. Deni Saputra Sp. Rad</option>
+                                <option value="2402667">dr. Auni Afikah</option>
+                                <option value="2402686">dr. Sartika Astri Mareta</option>
+                                <option value="2402699">dr Rizki Amanda Putra</option>
+                                <option value="2402715">dr. Fauzul Azmi</option>
+                              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="id_penjamin" class="col-sm-3 control-label">Penjamin</label>
+            <div class="col-sm-9">
+              <select class="form-control" name="kd_pj">
+                                <option value="-">-</option>
+                                <option value="A01">PT. MITRA SUKSES RAHARJA</option>
+                                <option value="A09">UMUM</option>
+                                <option value="A55">ADMEDIKA - SOMPO</option>
+                                <option value="A56">ADMEDIKA - PERTOCHINA</option>
+                                <option value="A57">ADMEDIKA - ACPHLT</option>
+                                <option value="A58">ADMEDIKA - RAMAYANA</option>
+                                <option value="A59">PT PERTAMINA</option>
+                                <option value="A61">ACS</option>
+                                <option value="A62">ADMEDIKA- PRUDENTIAL CORPORATE</option>
+                                <option value="A63">ADMEDIKA - PCETPYR</option>
+                                <option value="A64">PACIFIC CROSS</option>
+                                <option value="A65">ADMEDIKA - PCVICGR</option>
+                                <option value="A70">PT GLOBAL</option>
+                                <option value="A71">ADMEDIKA - PT. MANDIRI AXA </option>
+                                <option value="A72">Nayaka COB</option>
+                                <option value="A73">RMB</option>
+                                <option value="A74">ADMEDIKA -JMAS</option>
+                                <option value="A75">PT PAMAPERSADA NUSANTARA</option>
+                                <option value="A76">ADMEDIKA - MEGACHS</option>
+                                <option value="A77">OWLEXA</option>
+                                <option value="A78">ADMEDIKA - PERTALIFE INSURANCE</option>
+                                <option value="A79">PT - GPI</option>
+                                <option value="A80">BCALIFE</option>
+                                <option value="A81">PT. ADARO INDONESIA</option>
+                                <option value="A82">PT. AMARTHA MIKRO FINTEK</option>
+                                <option value="A83">BPJS Pengurusan</option>
+                                <option value="A84">PRODIA</option>
+                                <option value="A85">ADMEDIKA - AXA INSURANCE </option>
+                                <option value="A86">ADMEDIKA - AXA INSURANCE</option>
+                                <option value="A87">PT Across Asia Assist</option>
+                                <option value="A88">PT. ASTRA AVIVA LIFE</option>
+                                <option value="A91">AXA MANDIRI</option>
+                                <option value="A94">AD-TOKIO MARINE LIFE INSURANCE</option>
+                                <option value="A95">PT AJ CENTRAL ASIA RAYA</option>
+                                <option value="A96">AD - PT. BINA SARANA SUKSES</option>
+                                <option value="A97">AD - PT. OPAC BARATA QQ ELNUSA</option>
+                                <option value="A98">AD- SUNDAY INSURANCE INDONESIA</option>
+                                <option value="A99">ADMEDIKA - PT. GEO DIPA ENERGI</option>
+                                <option value="AAI">AA INTERNASIONAL</option>
+                                <option value="ADM">ADMEDIKA </option>
+                                <option value="AGG">ANGGSA MAS PT</option>
+                                <option value="AIA">AIA ASURANSI</option>
+                                <option value="AJA">ASTRA LIFE</option>
+                                <option value="ALL">ALLIANZ</option>
+                                <option value="AMX">BRILIFE</option>
+                                <option value="ANH">IN HEALTH (COB)</option>
+                                <option value="ASF">ADMEDIKA - SEQUIS FINANCIAL</option>
+                                <option value="AST">ASTRA ISUZU</option>
+                                <option value="ATK">AD-TAKAFUL KELUARGA</option>
+                                <option value="AVV">AVIVA ASURANSI</option>
+                                <option value="BNI">BNI LIFE ASURANSI</option>
+                                <option value="BPJ" selected>BPJS</option>
+                                <option value="BPK">BPJS KETENAGAKERJAAN</option>
+                                <option value="BRI">BANK BRI</option>
+                                <option value="BRK">BANK RIAU KEPRI</option>
+                                <option value="BUU">BUU</option>
+                                <option value="ENS">ENSALAH</option>
+                                <option value="FWD">FWD</option>
+                                <option value="GAR">GARDA</option>
+                                <option value="GL">PT GREAT EASTERN LIFEINDONESIA</option>
+                                <option value="GNR">GENERALI</option>
+                                <option value="GTI">PT. GTI</option>
+                                <option value="INH">IN HEALTH</option>
+                                <option value="JKL">SERTCO QUALITY PT</option>
+                                <option value="JRJ">JASA RAHARJA</option>
+                                <option value="KAR">KARYAWAN</option>
+                                <option value="KLM">AD BPBERAU</option>
+                                <option value="LIP">LIPPO ASURANSI</option>
+                                <option value="LKM">AD HARTA</option>
+                                <option value="MAG">ADMEDIKA - MULTI ARTHA GUNA</option>
+                                <option value="MAN">MANULIFE ASURANSI</option>
+                                <option value="MIC">MI COB</option>
+                                <option value="MIN">MANDIRI IN HEALTH</option>
+                                <option value="MNC">MNC LIFE</option>
+                                <option value="NYK">NAYAKA</option>
+                                <option value="PAD">PT ADEI</option>
+                                <option value="PAT">AD PATRASK</option>
+                                <option value="PCF">PACIFIC CROSS - ETIQA</option>
+                                <option value="PLA">MEDIKA PLAZA</option>
+                                <option value="PLN">PLN</option>
+                                <option value="PRU">PRUDENTIAL</option>
+                                <option value="PSL">PSLH UNRI PT</option>
+                                <option value="REL">RELIANCE</option>
+                                <option value="RSD">RSUD Mandau</option>
+                                <option value="RSP">RS PERMATA HATI</option>
+                                <option value="SMS">PT  MSIG LIFE INSURANCE</option>
+                                <option value="SNR">PT ASURANSI SINAR MAS</option>
+                                <option value="SUZ">SUZUKI FINANCE</option>
+                                <option value="THR">RS THURSINA</option>
+                                <option value="TML">TML ENERGY PT</option>
+                                <option value="TRK">TRAKINDO</option>
+                                <option value="UJK">AD ASURANSI CIGNA</option>
+                                <option value="VBN">ASURANSI FULLERTON</option>
+                                <option value="ZUR">ZURICH ASURANSI</option>
+                              </select>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="col-md-6">
+    <div id="pasien">
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label for="no_rkm_medis" class="col-sm-3 control-label">Nomor RM</label>
+            <div class="col-sm-9">
+              <input type="text" name="no_rkm_medis" class="form-control" placeholder="Nomor rekam medik" value="164736" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nama_pasien" class="col-sm-3 control-label">Nama Pasien</label>
+            <div class="col-sm-9">
+              <input type="text" name="nm_pasien" class="form-control" placeholder="Nama pasien" value="YUNIDAR" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="no_rkm_medis" class="col-sm-3 control-label">Nomor Rawat</label>
+            <div class="col-sm-9">
+              <input type="text" name="no_rawat" class="form-control" value="2024/11/29/001482" readonly>
+            </div>
+          </div>
+          <div class="form-group" id="diagnosa_masuk">
+            <label for="nama_pasien" class="col-sm-3 control-label">Diagnosa Masuk</label>
+            <div class="col-sm-9">
+              <input type="text" name="diagnosa_awal" class="form-control" placeholder="Diagnosa awal" value="SUSP TB PNEUMONIA">
+            </div>
+          </div>
+          <div  id="diagnosa_keluar">
+            <div class="form-group">
+              <label for="nama_pasien" class="col-sm-3 control-label">Diagnosa Keluar</label>
+              <div class="col-sm-9">
+                <input type="text" name="diagnosa_akhir" class="form-control" placeholder="Diagnosa akhir" value="-">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="id_dokter" class="col-sm-3 control-label">Status Keluar</label>
+              <div class="col-sm-9">
+                <select class="form-control" name="stts_pulang">
+                                    <option value="Sehat">Sehat</option>
+                                    <option value="Rujuk">Rujuk</option>
+                                    <option value="APS">APS</option>
+                                    <option value="+">+</option>
+                                    <option value="Meninggal">Meninggal</option>
+                                    <option value="Sembuh">Sembuh</option>
+                                    <option value="Membaik">Membaik</option>
+                                    <option value="Pulang Paksa">Pulang Paksa</option>
+                                    <option value="-" selected>-</option>
+                                    <option value="Pindah Kamar">Pindah Kamar</option>
+                                    <option value="Status Belum Lengkap">Status Belum Lengkap</option>
+                                    <option value="Atas Persetujuan Dokter">Atas Persetujuan Dokter</option>
+                                    <option value="Atas Permintaan Sendiri">Atas Permintaan Sendiri</option>
+                                    <option value="Lain-lain">Lain-lain</option>
+                                  </select>
+              </div>
+            </div>
+          </div>
+          <div id="stts_daftar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 m-b-xl">
+    <div class="text-center">
+      <button type="button" name="button" class="btn btn-primary" id="simpan"><i class="fa fa-save"></i><span class="hidden-xs"> Simpan</span></button>
+      <button type="button" name="button" class="btn btn-info" id="simpan_keluar"><i class="fa fa-trash"></i><span class="hidden-xs"> Keluar</span></button>
+      
+      <button type="button" name="button" class="btn btn-default" id="hapus"><i class="fa fa-trash"></i><span class="hidden-xs"> Hapus</span></button>
+      <button type="button" name="button" class="btn btn-danger" id="batal"><i class="fa fa-close"></i><span class="hidden-xs"> Batal</span></button>
+    </div>
+  </div>
 </div>
+<script type="text/javascript">
+  $('select').selectator();
+  // ketika inputbox pencarian no rm/nama pasien diisi
+  $('input:text[name=pasien]').on('keydown',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    if(event.which==13){
+    var url    = baseURL + '/rawat_inap/pasien?t=' + mlite.token;
+    var cari = $('input:text[name=pasien]').val();
 
-<script>
-	// Avatar
-	var reader  = new FileReader();
-	reader.addEventListener("load", function() {
-		$("#photoPreview").attr('src', reader.result);
-	}, false);
-	$("input[name=photo]").change(function() {
-		reader.readAsDataURL(this.files[0]);
-	});
+    if(cari!="") {
+        $.post(url, {cari: cari} ,function(data) {
+        // tampilkan data yang sudah di perbaharui
+          $("#pasien").html(data).show();
+        });
+    }
+    else {
+        $("#pasien").hide();
+    }
+    }
+  });
+  // ketika baris data diklik
+  $("#pasien").on("click", ".pilih", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
 
-	// Password
-	$("#passwordChange").on("click", function() {
-		$("input[name=password]").val("").attr('disabled', false);
-		$(this).remove();
-		return false;
-	})
+    var no_rkm_medis		   = $(this).attr("data-no_rkm_medis");
+    var nm_pasien    = $(this).attr("data-nm_pasien");
+    var no_rawat      = $(this).attr("data-no_rawat");
+
+    var url    				= baseURL + '/rawat_inap/statusdaftar?t=' + mlite.token;
+
+    $.post(url, {no_rkm_medis: no_rkm_medis} ,function(data) {
+      $("#stts_daftar").html(data).show();
+    });
+    var stts_daftar = $('input:text[name=stts_daftar]').val();
+
+    $('input:text[name=no_rkm_medis]').val(no_rkm_medis);
+    $('input:text[name=nm_pasien]').val(nm_pasien);
+    $('input:text[name=no_rawat]').val(no_rawat);
+
+    $("#pasien").hide();
+
+  });
+</script>
+<script type="text/javascript">
+   $(function () {
+       $('.tanggal_jam').datetimepicker({
+         format: 'YYYY-MM-DD HH:mm:ss',
+         locale: 'id'
+       });
+   });
+   $(function () {
+       $('.tanggal').datetimepicker({
+         format: 'YYYY-MM-DD',
+         locale: 'id'
+       });
+   });
+   $(function () {
+       $('.jam').datetimepicker({
+         format: 'HH:mm:ss',
+         locale: 'id'
+       });
+   });
 </script>

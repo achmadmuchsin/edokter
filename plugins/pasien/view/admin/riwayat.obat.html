@@ -16,11 +16,11 @@
 <del>
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> Tutup</button>
-    <h4 class="modal-title">Riwayat Perawatan</h4>
+    <h4 class="modal-title">Riwayat Obat</h4>
   </div>
 </del>
 <div class="modal-body">
-  <h4>Data Riwayat Perawatan Pasien</h4>
+  <h4>Data Riwayat Obat Pasien</h4>
   <div class="table table-responsive">
     <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
       <tr class="isi">
@@ -48,36 +48,36 @@
         <td valign="top" width="1%" align="center">:</td>
         <td valign="top" width="79%">{$riwayat.pasien.tgl_lahir}</td>
       </tr>
-      <tr class="isi">
+      <!-- <tr class="isi">
         <td valign="top" width="20%">Ibu Kandung</td>
         <td valign="top" width="1%" align="center">:</td>
         <td valign="top" width="79%">{$riwayat.pasien.nm_ibu}</td>
-      </tr>
-      <tr class="isi">
+      </tr> -->
+      <!-- <tr class="isi">
         <td valign="top" width="20%">Golongan Darah</td>
         <td valign="top" width="1%" align="center">:</td>
         <td valign="top" width="79%">{$riwayat.pasien.gol_darah}</td>
-      </tr>
-      <tr class="isi">
+      </tr> -->
+      <!-- <tr class="isi">
         <td valign="top" width="20%">Status Nikah</td>
         <td valign="top" width="1%" align="center">:</td>
         <td valign="top" width="79%">{$riwayat.pasien.stts_nikah}</td>
-      </tr>
-      <tr class="isi">
+      </tr> -->
+      <!-- <tr class="isi">
         <td valign="top" width="20%">Agama</td>
         <td valign="top" width="1%" align="center">:</td>
         <td valign="top" width="79%">{$riwayat.pasien.agama}</td>
-      </tr>
-      <tr class="isi">
+      </tr> -->
+      <!-- <tr class="isi">
         <td valign="top" width="20%">Pendidikan Terakhir</td>
         <td valign="top" width="1%" align="center">:</td>
         <td valign="top" width="79%">{$riwayat.pasien.pnd}</td>
-      </tr>
-      <tr class="isi">
+      </tr> -->
+      <!-- <tr class="isi">
         <td valign="top" width="20%">Pertama Daftar</td>
         <td valign="top" width="1%" align="center">:</td>
         <td valign="top" width="79%">{$riwayat.pasien.tgl_daftar}</td>
-      </tr>
+      </tr> -->
     </table>
 
     <h4 class="m-t-xl">Data Riwayat</h4>
@@ -322,7 +322,7 @@
         </td>
       </tr>
       {/if}
-      <tr>
+      <!-- <tr>
         <td valign="top" width="20%">Pemeriksaan</td>
         <td valign="top" width="1%" align="center">:</td>
         <td valign="top" width="79%">
@@ -433,8 +433,8 @@
              {/if}
           </table>
         </td>
-      </tr>
-      {if: $value.rawat_jl_dr || $value.rawat_jl_pr || $value.rawat_jl_drpr}
+      </tr> -->
+      <!-- {if: $value.rawat_jl_dr || $value.rawat_jl_pr || $value.rawat_jl_drpr}
       <tr class="isi">
         <td valign="top" width="20%">
           Tindakan Perawatan
@@ -691,7 +691,7 @@
           {/if}
         </td>
       </tr>
-      {/if}
+      {/if} -->
 
       {if: !empty($value.pemberian_obat)}
       <tr class="isi">
@@ -767,7 +767,7 @@
       <!--</tr>-->
       <!--{/if}-->
       
-      {if: $value.periksa_lab}
+      <!-- {if: $value.periksa_lab}
       <tr class="isi">
         <td valign="top" width="20%">Laboratorium </td>
         <td valign="top" width="1%" align="center">:</td>
@@ -815,9 +815,9 @@
           </table>
         </td>
       </tr>
-      {/if}
+      {/if} -->
       
-      {if: $value.periksa_radiologi}
+      <!-- {if: $value.periksa_radiologi}
       <tr class="isi">
         <td valign="top" width="20%">Radiologi</td>
         <td valign="top" width="1%" align="center">:</td>
@@ -876,8 +876,8 @@
           </table>
         </td>
       </tr>
-      {/if}
-      {if: $value.operasi}
+      {/if} -->
+      <!-- {if: $value.operasi}
       <tr class="isi">
         <td valign="top" width="20%">Operasi</td>
         <td valign="top" width="1%" align="center">:</td>
@@ -896,7 +896,7 @@
           </table>
         </td>
       </tr>
-      {/if}
+      {/if} -->
       {if: $value.obat_operasi}
       <tr class="isi">
         <td valign="top" width="20%">Obat dan BHP Operasi</td>
@@ -919,7 +919,7 @@
         </td>
       </tr>
       {/if}
-      {if: $value.berkas_digital}
+      <!-- {if: $value.berkas_digital}
       <tr class="isi">
         <td valign="top" width="20%">Berkas Digital</td>
         <td valign="top" width="1%" align="center">:</td>
@@ -933,7 +933,6 @@
                         <div class="col-sm-12 col-md-12">
                             <div class="scroller">
                                 <a href="{?=url(WEBAPPS_URL.'/berkasrawat/'.$data.lokasi_file)?}" class="images">
-                                    <!--<img src="{?=url(WEBAPPS_URL.'/berkasrawat/'.$data.lokasi_file)?}" class="img-responsive">-->
                                     <iframe name="myiframe" id="myiframe" src="{?=url(WEBAPPS_URL.'/berkasrawat/'.$data.lokasi_file)?}" class="img-responsive"></iframe>
                                 </a>
                             </div>
@@ -949,7 +948,7 @@
           </table>
         </td>
       </tr>
-      {/if}
+      {/if} -->
     </table>
     <br>
     {/loop}
