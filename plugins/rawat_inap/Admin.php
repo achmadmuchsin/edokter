@@ -677,6 +677,18 @@ class Admin extends AdminModule
       exit();
     }
 
+    public function anyCatatanPasien()
+    {
+      $catatan_pasien = $this->db('catatan_pasien')
+        ->where('no_rawat', $_POST['no_rawat'])
+        ->toArray();
+      echo $this->draw('form.soap.html', ['catatan_pasien' => $catatan_pasien]);
+      exit();
+    }
+
+
+
+    
     public function postAturanPakai()
     {
 

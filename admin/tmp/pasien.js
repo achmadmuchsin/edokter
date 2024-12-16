@@ -122,7 +122,7 @@ $("#form").on("click", "#simpan", function(event){
     } ,function(data) {
       console.log(data);
       data = JSON.parse(data);
-      var audio = new Audio('http://192.168.102.13/Edokter/assets/sound/' + data.status + '.mp3');
+      var audio = new Audio('http://localhost/edokter/assets/sound/' + data.status + '.mp3');
       audio.play();
       if(data.status == 'success') {
         if(typeof ws != 'undefined' && typeof ws.readyState != 'undefined' && ws.readyState == 1){

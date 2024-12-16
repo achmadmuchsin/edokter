@@ -143,89 +143,9 @@ $('#manage').on('click', '#lunas_periode_rawat_jalan', function(event){
 
 // ketika tombol simpan diklik
 $("#form_soap").on("click", "#simpan_soap", function(event){
-      var baseURL = mlite.url + '/' + mlite.admin;
-    event.preventDefault();
-
-    var no_rawat        = $('input:text[name=no_rawat]').val();
-    var tgl_perawatan   = $('input:text[name=tgl_perawatan]').val();
-    var jam_rawat       = $('input:text[name=jam_rawat]').val();
-    var suhu_tubuh      = $('input:text[name=suhu_tubuh]').val();
-    var tensi           = $('input:text[name=tensi]').val();
-    var nadi            = $('input:text[name=nadi]').val();
-    var respirasi       = $('input:text[name=respirasi]').val();
-    var tinggi          = $('input:text[name=tinggi]').val();
-    var berat           = $('input:text[name=berat]').val();
-    var gcs             = $('input:text[name=gcs]').val();
-    var kesadaran       = $('input:text[name=kesadaran]').val();
-    var alergi          = $('input:text[name=alergi]').val();
-    var alergi          = $('input:text[name=alergi]').val();
-    var lingkar_perut   = $('input:text[name=lingkar_perut]').val();
-    var keluhan         = $('textarea[name=keluhan]').val();
-    var pemeriksaan     = $('textarea[name=pemeriksaan]').val();
-    var penilaian       = $('textarea[name=penilaian]').val();
-    var rtl             = $('textarea[name=rtl]').val();
-    var instruksi       = $('textarea[name=instruksi]').val();
-    var evaluasi        = $('textarea[name=evaluasi]').val();
-    var spo2            = $('input:text[name=spo2]').val();
-
-    var url = baseURL + '/dokter_ralan/savesoap?t=' + mlite.token;
-    $.post(url, {no_rawat : no_rawat,
-    tgl_perawatan: tgl_perawatan,
-    jam_rawat: jam_rawat,
-    suhu_tubuh : suhu_tubuh,
-    tensi : tensi,
-    nadi : nadi,
-    respirasi : respirasi,
-    tinggi : tinggi,
-    berat : berat,
-    gcs : gcs,
-    kesadaran : kesadaran,
-    alergi : alergi,
-    lingkar_perut: lingkar_perut,
-    keluhan : keluhan,
-    pemeriksaan : pemeriksaan,
-    penilaian : penilaian,
-    rtl : rtl,
-    instruksi : instruksi,
-    evaluasi : evaluasi,
-    spo2 : spo2
-    }, function(data) {
-      // tampilkan data
-      $("#display").hide();
-      var url = baseURL + '/dokter_ralan/soap?t=' + mlite.token;
-      $.post(url, {no_rawat : no_rawat,
-      }, function(data) {
-        // tampilkan data
-        $("#soap").html(data).show();
-      });
-      $('input:text[name=suhu_tubuh]').val("");
-      $('input:text[name=tensi]').val("");
-      $('input:text[name=nadi]').val("");
-      $('input:text[name=respirasi]').val("");
-      $('input:text[name=tinggi]').val("");
-      $('input:text[name=berat]').val("");
-      $('input:text[name=gcs]').val("");
-      $('input:text[name=kesadaran]').val("");
-      $('input:text[name=alergi]').val("");
-      $('input:text[name=lingkar_perut]').val("");
-      $('textarea[name=keluhan]').val("");
-      $('textarea[name=pemeriksaan]').val("");
-      $('textarea[name=penilaian]').val("");
-      $('textarea[name=rtl]').val("");
-      $('textarea[name=instruksi]').val("");
-      $('textarea[name=evaluasi]').val("");
-      $('input:text[name=spo2]').val("");
-      $('input:text[name=tgl_perawatan]').val("2024-12-05");
-      $('input:text[name=tgl_registrasi]').val("2024-12-05");
-      //$('input:text[name=jam_rawat]').val("14:04:15");
-      $.post(baseURL + '/dokter_ralan/cekwaktu?t=' + mlite.token, {
-      } ,function(data) {
-        $("#form_soap #jam_rawat").val(data);
-      });
-      $('#notif').html("<div class=\"alert alert-success alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
-      "Data soap telah disimpan!"+
-      "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
-      "</div>").show();
+      bootbox.alert({
+        title: "Pemberitahuan penggunaan!",
+        message: "Silahkan login dengan akun non administrator (akun yang berelasi dengan modul kepegawaian)!"
     });
   });
 
@@ -360,9 +280,9 @@ $("#soap").on("click",".hapus_soap", function(event){
         $('textarea[name=instruksi]').val("");
         $('textarea[name=evaluasi]').val("");
         $('input:text[name=spo2]').val("");
-        $('input:text[name=tgl_perawatan]').val("2024-12-05");
-        $('input:text[name=tgl_registrasi]').val("2024-12-05");
-        $('input:text[name=jam_rawat]').val("14:04:15");
+        $('input:text[name=tgl_perawatan]').val("2024-12-14");
+        $('input:text[name=tgl_registrasi]').val("2024-12-14");
+        $('input:text[name=jam_rawat]').val("08:07:08");
         $('#notif').html("<div class=\"alert alert-danger alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
         "Data rincian riwayat telah dihapus!"+
         "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
@@ -1109,8 +1029,8 @@ function bersih(){
   $('input:text[name=no_rawat]').val("");
   $('input:text[name=no_rkm_medis]').val("");
   $('input:text[name=nm_pasien]').val("");
-  $('input:text[name=tgl_perawatan]').val("2024-12-05");
-  $('input:text[name=tgl_registrasi]').val("2024-12-05");
+  $('input:text[name=tgl_perawatan]').val("2024-12-14");
+  $('input:text[name=tgl_registrasi]').val("2024-12-14");
   $('input:text[name=tgl_lahir]').val("");
   $('input:text[name=jenis_kelamin]').val("");
   $('input:text[name=alamat]').val("");
@@ -1194,7 +1114,7 @@ $(document).ready(function () {
     load: function (search, callback) {
       if (search.length < this.minSearchLength) return callback();
       $.ajax({
-        url: 'http://192.168.102.13/Edokter/admin/dokter_ralan/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=e7aaaf7988a6',
+        url: 'http://192.168.102.252/edokter/admin/dokter_ralan/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=bf64c11c2998',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
@@ -1218,7 +1138,7 @@ $(document).ready(function () {
     load: function (search, callback) {
       if (search.length < this.minSearchLength) return callback();
       $.ajax({
-        url: 'http://192.168.102.13/Edokter/admin/dokter_ralan/ajax?show=aturan_pakai&aturan=' + encodeURIComponent(search) + '&t=e7aaaf7988a6',
+        url: 'http://192.168.102.252/edokter/admin/dokter_ralan/ajax?show=aturan_pakai&aturan=' + encodeURIComponent(search) + '&t=bf64c11c2998',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
@@ -1242,7 +1162,7 @@ $(document).ready(function () {
     load: function (search, callback) {
       if (search.length < this.minSearchLength) return callback();
       $.ajax({
-        url: 'http://192.168.102.13/Edokter/admin/dokter_ralan/ajax?show=jns_perawatan&nm_perawatan=' + encodeURIComponent(search) + '&t=e7aaaf7988a6',
+        url: 'http://192.168.102.252/edokter/admin/dokter_ralan/ajax?show=jns_perawatan&nm_perawatan=' + encodeURIComponent(search) + '&t=bf64c11c2998',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
@@ -1266,7 +1186,7 @@ $(document).ready(function () {
     load: function (search, callback) {
       if (search.length < this.minSearchLength) return callback();
       $.ajax({
-        url: 'http://192.168.102.13/Edokter/admin/dokter_ralan/ajax?show=jns_perawatan_lab&nm_perawatan=' + encodeURIComponent(search) + '&t=e7aaaf7988a6',
+        url: 'http://192.168.102.252/edokter/admin/dokter_ralan/ajax?show=jns_perawatan_lab&nm_perawatan=' + encodeURIComponent(search) + '&t=bf64c11c2998',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
@@ -1290,7 +1210,7 @@ $(document).ready(function () {
     load: function (search, callback) {
       if (search.length < this.minSearchLength) return callback();
       $.ajax({
-        url: 'http://192.168.102.13/Edokter/admin/dokter_ralan/ajax?show=jns_perawatan_radiologi&nm_perawatan=' + encodeURIComponent(search) + '&t=e7aaaf7988a6',
+        url: 'http://192.168.102.252/edokter/admin/dokter_ralan/ajax?show=jns_perawatan_radiologi&nm_perawatan=' + encodeURIComponent(search) + '&t=bf64c11c2998',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
@@ -1314,7 +1234,7 @@ $(document).ready(function () {
     load: function (search, callback) {
       if (search.length < this.minSearchLength) return callback();
       $.ajax({
-        url: 'http://192.168.102.13/Edokter/admin/dokter_ralan/ajax?show=icd10&s=' + encodeURIComponent(search) + '&t=e7aaaf7988a6',
+        url: 'http://192.168.102.252/edokter/admin/dokter_ralan/ajax?show=icd10&s=' + encodeURIComponent(search) + '&t=bf64c11c2998',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
@@ -1338,7 +1258,7 @@ $(document).ready(function () {
     load: function (search, callback) {
       if (search.length < this.minSearchLength) return callback();
       $.ajax({
-        url: 'http://192.168.102.13/Edokter/admin/dokter_ralan/ajax?show=icd9&s=' + encodeURIComponent(search) + '&t=e7aaaf7988a6',
+        url: 'http://192.168.102.252/edokter/admin/dokter_ralan/ajax?show=icd9&s=' + encodeURIComponent(search) + '&t=bf64c11c2998',
         type: 'GET',
         dataType: 'json',
         success: function(data) {

@@ -5,15 +5,16 @@
         <tr>
           <th style="white-space: nowrap;">No. RM</th>
           <th style="white-space: nowrap;">Nama Pasien</th>
-          <th style="white-space: nowrap;">Nomor Rawat</th>
-          <th style="white-space: nowrap;">Bangsa/Kamar</th>
+          <th style="white-space: nowrap;">ID Kunjungan</th>
+          <th style="white-space: nowrap;">Antrian</th>
+          <th style="white-space: nowrap;">Poliklinik</th>
           <th style="white-space: nowrap;">Dokter</th>
           <th style="white-space: nowrap;">Penjamin</th>
           <th style="white-space: nowrap;">No. Asuransi</th>
-          <th style="white-space: nowrap;">Tgl. Masuk</th>
-          <th style="white-space: nowrap;">Tgl. Keluar</th>
-          <th style="white-space: nowrap;">Status Bayar</th>
-          <th style="white-space: nowrap;">Status</th>
+          <th style="white-space: nowrap;">Tgl. Kunjungan</th>
+          <th style="white-space: nowrap;">Stts. Periksa</th>
+          <th style="white-space: nowrap;">Stts. Lanjut</th>
+          <th style="white-space: nowrap;">Stts. Bayar</th>
         </tr>
       </thead>
       <tbody>
@@ -35,6 +36,43 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="sepModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="printModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          ...
+      </div>
+  </div>
+</div>
+<div class="modal fade" id="lokalisModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-full" role="document">
+      <div class="modal-content">
+          ...
+      </div>
+  </div>
+</div>
+<script>
+  $("#btn_cetak").click(function() {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var url    = baseURL + '/igd/cetak?t=' + mlite.token;
+    var cari = $('input:text[name=cari]').val();
+    var tgl_awal = $('input:text[name=periode_rawat_jalan]').val();
+    var tgl_akhir = $('input:text[name=periode_rawat_jalan_akhir]').val();
+
+    $.post(url, {cari: cari, tgl_awal: tgl_awal, tgl_akhir: tgl_akhir} ,function(data) {
+      //window.open(baseURL + '/rawat_jalan/cetakpdf?t=' + mlite.token);
+      $("#printModal").modal('show').html('<div style="text-align:center;margin:20px auto;width:90%;height:95%;"><iframe src="' + baseURL + '/igd/cetakpdf?t=' + mlite.token + '" frameborder="no" width="100%" height="100%"></iframe></div>');
+    });
+
+		return false;
+  });
+</script>
 <script type="text/javascript">
   $('a[href="#soap"]').click(function(event){
     var baseURL = mlite.url + '/' + mlite.admin;
@@ -53,7 +91,7 @@
     $('input:text[name=tgl_registrasi]').val(tgl_registrasi);
     $("#display").hide();
 
-    var url = baseURL + '/dokter_ranap/soap?t=' + mlite.token;
+    var url = baseURL + '/igd/soap?t=' + mlite.token;
     $.post(url, {no_rawat : no_rawat,
     }, function(data) {
       // tampilkan data
@@ -78,7 +116,7 @@
     $('input:text[name=nm_pasien]').val(nm_pasien);
     $("#display").hide();
 
-    var url = baseURL + '/dokter_ranap/rincian?t=' + mlite.token;
+    var url = baseURL + '/igd/rincian?t=' + mlite.token;
     $.post(url, {no_rawat : no_rawat,
     }, function(data) {
       // tampilkan data
@@ -89,6 +127,161 @@
     });
   });
 
+  $('a[href="#berkas_digital"]').click(function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+
+    var no_rawat = $(this).attr("data-no_rawat");
+    var no_rkm_medis = $(this).attr("data-no_rkm_medis");
+    var nm_pasien = $(this).attr("data-nm_pasien");
+
+    $('input:text[name=no_rawat]').val(no_rawat);
+    $('input:text[name=no_rkm_medis]').val(no_rkm_medis);
+    $('input:text[name=nm_pasien]').val(nm_pasien);
+    $("#display").hide();
+
+    var url = baseURL + '/igd/berkasdigital?t=' + mlite.token;
+    $.post(url, {no_rawat : no_rawat,
+    }, function(data) {
+      // tampilkan data
+      $("#form_berkasdigital").show();
+      $("#form").hide();
+      $("#notif").hide();
+      $("#berkasdigital").html(data).show();
+      $('.images').lightbox();
+    });
+  });
+
+  $('a[href="#status_rawat"]').click(function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var url = baseURL + '/igd/statusrawat?t=' + mlite.token;
+    var no_rawat = $(this).attr("data-no_rawat");
+    var stts = $(this).attr("data-stts");
+
+    // tampilkan dialog konfirmasi
+
+    bootbox.prompt({
+        title: "Status lanjut pasien.",
+        message: '',
+        inputType: 'radio',
+        value: stts,
+        inputOptions: [
+        {
+            text: 'Belum Periksa',
+            value: 'Belum',
+        },
+        {
+            text: 'Sudah Periksa',
+            value: 'Sudah',
+        },
+        {
+            text: 'Batal Periksa',
+            value: 'Batal',
+        },
+        {
+            text: 'Berkas Diterima',
+            value: 'Berkas Diterima',
+        },
+        {
+            text: 'Pasien Dirujuk',
+            value: 'Dirujuk',
+        },
+        {
+            text: 'Meninggal',
+            value: 'Meninggal',
+        },
+        {
+            text: 'Dirawat',
+            value: 'Dirawat',
+        },
+        {
+            text: 'Pulang Paksa',
+            value: 'Pulang Paksa',
+        }
+        ],
+        callback: function (result) {
+            console.log(result);
+            // ketika ditekan tombol ok
+            if (result){
+              // mengirimkan perintah penghapusan
+              $.post(url, {
+                no_rawat: no_rawat,
+                stts: result
+              } ,function(data) {
+                // sembunyikan form, tampilkan data yang sudah di perbaharui, tampilkan notif
+                $("#display").load(baseURL + '/igd/display?t=' + mlite.token);
+                $('#notif').html("<div class=\"alert alert-success alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+                "Status lanjut pasien telah disimpan!"+
+                "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+                "</div>").show();
+              });
+            }
+        }
+    });
+  });
+  $('a[href="#status_lanjut"]').click(function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var url = baseURL + '/igd/statuslanjut?t=' + mlite.token;
+    var no_rawat = $(this).attr("data-no_rawat");
+    // tampilkan dialog konfirmasi
+
+    var set_status_lanjut = ''
+        + '<div class="form-group">'
+        + '<label for="status_keluar">Pilih Status Lanjut</label>'
+        + '<select name="status_lanjut" id="status_lanjut" class="form-control" data-use-dimmer="false">'
+        + '<option value="ralan">Rawat Jalan</option>'
+        + '<option value="ranap">Rawat Inap</option>'
+        + '</select>'
+        + '</div>'
+        + '';
+
+    // bootbox.confirm("Apakah pasien dimasukkan dalam kamar inap?", function(result){
+    //   // ketika ditekan tombol ok
+    //   if (result){
+    //     // mengirimkan perintah penghapusan
+    //     $.post(url, {
+    //       no_rawat: no_rawat
+    //     } ,function(data) {
+    //       // sembunyikan form, tampilkan data yang sudah di perbaharui, tampilkan notif
+    //       $("#display").load(baseURL + '/igd/display?t=' + mlite.token);
+    //       $('#notif').html("<div class=\"alert alert-success alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+    //       "Status periksa pasien telah disimpan!"+
+    //       "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+    //       "</div>").show();
+    //     });
+    //   }
+    // });
+    bootbox.dialog({
+      message: set_status_lanjut,
+      title: 'Set Status Lanjut Pasien',
+      buttons: {
+        main: {
+          label: 'Simpan',
+          className: 'btn-primary',
+          callback() {
+            var status_lanjut = $('#status_lanjut').find(':selected').val();
+            //console.log(tgl_keluar);
+            $.post(url, {
+              no_rawat: no_rawat,
+              status_lanjut: status_lanjut
+            } ,function(data) {
+              // sembunyikan form, tampilkan data yang sudah di perbaharui, tampilkan notif
+              $("#display").load(baseURL + '/igd/display?t=' + mlite.token);
+              $('#notif').html("<div class=\"alert alert-success alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+              "Status lanjut pasien telah disimpan!"+
+              "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+              "</div>").show();
+            });
+          }
+        }
+      }
+    });
+    $('select').selectator();
+    event.stopPropagation();
+    return false;
+  });
   $(".alert-dismissible").fadeTo(3000, 500).slideUp(500);
   $('.dataTables').DataTable({
     "order": [[ 3, "desc" ]],

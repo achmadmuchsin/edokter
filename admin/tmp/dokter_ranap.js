@@ -239,9 +239,9 @@ $("#soap").on("click",".hapus_soap", function(event){
         $('textarea[name=instruksi]').val("");
         $('textarea[name=evaluasi]').val("");
         $('input:text[name=spo2]').val("");
-        $('input:text[name=tgl_perawatan]').val("2024-12-12");
-        $('input:text[name=tgl_registrasi]').val("2024-12-12");
-        $('input:text[name=jam_rawat]').val("11:40:59");
+        $('input:text[name=tgl_perawatan]').val("2024-12-13");
+        $('input:text[name=tgl_registrasi]').val("2024-12-13");
+        $('input:text[name=jam_rawat]').val("11:46:35");
         $('#notif').html("<div class=\"alert alert-danger alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
         "Data rincian riwayat telah dihapus!"+
         "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
@@ -901,8 +901,8 @@ function bersih(){
   $('input:text[name=no_rawat]').val("");
   $('input:text[name=no_rkm_medis]').val("");
   $('input:text[name=nm_pasien]').val("");
-  $('input:text[name=tgl_perawatan]').val("2024-12-12");
-  $('input:text[name=tgl_registrasi]').val("2024-12-12");
+  $('input:text[name=tgl_perawatan]').val("2024-12-13");
+  $('input:text[name=tgl_registrasi]').val("2024-12-13");
   $('input:text[name=tgl_lahir]').val("");
   $('input:text[name=jenis_kelamin]').val("");
   $('input:text[name=alamat]').val("");
@@ -986,7 +986,7 @@ $(document).ready(function () {
     load: function (search, callback) {
       if (search.length < this.minSearchLength) return callback();
       $.ajax({
-        url: 'http://localhost/Edokter/admin/dokter_ranap/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=98af89fb5b43',
+        url: 'http://localhost/edokter/admin/dokter_ranap/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=6cd62253443a',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
