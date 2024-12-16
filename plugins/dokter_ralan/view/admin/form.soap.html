@@ -134,12 +134,16 @@
           <span class="{if: $admin_mode == 'simple'}hidden{/if}">
           <button type="button" name="button" class="btn btn-danger" id="buka_icd10dan9"><i class="fa fa-download"></i><span class="hidden-xs"> ICD 10 & 9</span></button>
           </span>
-          <button type="button" name="button" class="btn btn-info" id="eresep"><i class="fa fa-medkit"></i><span class="hidden-xs"> E-Resep</span></button>
-          <button type="button" name="button" class="btn btn-info" id="buka_riwayat"><i class="fa fa-file-o"></i><span class="hidden-xs"> Riwayat</span></button>
-          <button type="button" name="button" class="btn btn-success" id="selesai_soap"><i class="fa fa-check"></i><span class="hidden-xs"> Selesai</span></button>
-          <span class="pull-right">
+          <!-- <button type="button" name="button" class="btn btn-info" id="eresep"><i class="fa fa-medkit"></i><span class="hidden-xs"> E-Resep</span></button> -->
+          <button type="button" name="button" class="btn btn-info" id="buka_riwayat"><i class="fa fa-file-o"></i><span class="hidden-xs"> Semua Riwayat</span></button>
+          <button type="button" name="button" class="btn btn-info" id="riwayatterakhir"><i class="fa fa-file-o"></i><span class="hidden-xs"> Riwayat Terakhir</span></button>
+          <button type="button" name="button" class="btn btn-info" id="bukaobat"><i class="fa fa-file-o"></i><span class="hidden-xs"> Riwayat Obat</span></button>
+          <button type="button" name="button" class="btn btn-info" id="riwayatlaboratorium"><i class="fa fa-file-o"></i><span class="hidden-xs"> Riwayat Laboratorium</span></button>
+          <p></p>
+          <button type="button" name="button" class="btn btn-info" id="riwayatradiologi"><i class="fa fa-file-o"></i><span class="hidden-xs"> Riwayat Radiologi</span></button>
             <a href="#" class="btn btn-info" id="odontogram"><i class="fa fa-bell"></i><span class="hidden-xs"> Odontogram</span></a>
             <a href="#" class="btn btn-warning resume"><i class="fa fa-file-text"></i><span class="hidden-xs"> Resume</span></a>
+          <button type="button" name="button" class="btn btn-success" id="selesai_soap"><i class="fa fa-check"></i><span class="hidden-xs"> Selesai</span></button>
           </span>
         </div>
       </div>
@@ -407,6 +411,78 @@
     return false;
   });
 </script>
+
+<!-- Tambahan Script Buka Riwayat terakhir, riwayat obat, riwayat laboratorium, Riwayat radiologi -->
+<script type="text/javascript">
+  $("#form_soap").on("click","#bukaobat", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rkm_medis = $('input:text[name=no_rkm_medis]').val();
+    var loadURL =  baseURL + '/pasien/RiwayatPerawatanObat/' + no_rkm_medis + '?t=' + mlite.token;
+
+    var modal = $('#resumeModal');
+    var modalContent = $('#resumeModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  $("#form_soap").on("click","#riwayatterakhir", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rkm_medis = $('input:text[name=no_rkm_medis]').val();
+    var loadURL =  baseURL + '/pasien/Riwayatterakhir/' + no_rkm_medis + '?t=' + mlite.token;
+
+    var modal = $('#resumeModal');
+    var modalContent = $('#resumeModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  $("#form_soap").on("click","#riwayatlaboratorium", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rkm_medis = $('input:text[name=no_rkm_medis]').val();
+    var loadURL =  baseURL + '/pasien/riwayatlaboratorium/' + no_rkm_medis + '?t=' + mlite.token;
+
+    var modal = $('#resumeModal');
+    var modalContent = $('#resumeModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  $("#form_soap").on("click","#riwayatradiologi", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rkm_medis = $('input:text[name=no_rkm_medis]').val();
+    var loadURL =  baseURL + '/pasien/riwayatradiologi/' + no_rkm_medis + '?t=' + mlite.token;
+
+    var modal = $('#resumeModal');
+    var modalContent = $('#resumeModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<!-- Akhir Script Nya -->
+
 <script type="text/javascript">
   // tombol buka form diklik
   $("#form_soap").on('click', '#buka_icd10dan9', function(){

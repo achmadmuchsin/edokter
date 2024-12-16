@@ -677,9 +677,22 @@ class Admin extends AdminModule
       exit();
     }
 
+    // public function anyCatatanPasien()
+    // {
+    //   $catatan_pasien = $this->db('catatan_pasien')
+    //     ->select([
+    //       'no_rkm_medis',
+    //       'catatan'
+    //     ])
+    //     ->where('no_rkm_medis', $_POST['no_rkm_medis'])
+    //     ->toArray();
+    //   echo $this->draw('form.soap.html', ['catatan_pasien' => $catatan_pasien]);
+    //   exit();
+    // }
+
+
     public function postAturanPakai()
     {
-
       if(isset($_POST["query"])){
         $output = '';
         $key = "%".$_POST["query"]."%";
@@ -692,9 +705,7 @@ class Admin extends AdminModule
         }
         echo $output;
       }
-
       exit();
-
     }
 
     public function anyBerkasDigital()

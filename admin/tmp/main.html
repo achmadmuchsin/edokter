@@ -195,7 +195,7 @@
       </div>
       <i class="fa fa-exclamation-triangle"></i> Anda Belum Presensi<br>
       <i>*  
-Ini bukan tentang ide. Ini tentang mewujudkan ide *</i>
+Kamu bisa membodohi semua orang, tetapi kamu tidak bisa membohongi pikiranmu *</i>
     </div>
       <!-- The Modal -->
 <div class="modal" id="myModal" data-keyboard="false" data-backdrop="static">
@@ -307,14 +307,14 @@ Ini bukan tentang ide. Ini tentang mewujudkan ide *</i>
 
       var base64image = document.getElementById("imageprev").src;
 
-      Webcam.upload(base64image, 'http://localhost/Edokter/admin/dashboard/upload?t=9e529f06a2e3&shift=' + getshift, function (code, text) {
+      Webcam.upload(base64image, 'http://localhost/Edokter/admin/dashboard/upload?t=21e9c3a9e50e&shift=' + getshift, function (code, text) {
       });
 
       Webcam.reset();
 
       navigator.geolocation.getCurrentPosition(
         function (position) {
-          $.post('http://localhost/Edokter/admin/dashboard/geolocation?t=9e529f06a2e3', { lat: position.coords.latitude, lng: position.coords.longitude });
+          $.post('http://localhost/Edokter/admin/dashboard/geolocation?t=21e9c3a9e50e', { lat: position.coords.latitude, lng: position.coords.longitude });
         },
         function error(err) { },
         { enableHighAccuracy: true, timeout: 5000 }

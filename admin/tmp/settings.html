@@ -1,0 +1,25 @@
+<div class="row">
+    <form action="http://localhost/edokter/admin/dokter_ralan/saveSettings?t=6cd62253443a" method="POST">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Pengaturan Modul Dokter Ralan</h3>
+                </div>
+            	  <div class="panel-body">
+                    <div class="form-group">
+                         <label>Otomatis Sudah Periksa</label>
+                         <div class="radio">
+                             <label class="radio-inline">
+                                <input type="radio" name="dokter_ralan[set_sudah]" value="ya"  /> Ya
+                             </label>
+                             <label class="radio-inline">
+                                <input type="radio" name="dokter_ralan[set_sudah]" value="tidak" checked /> Tidak
+                             </label>
+                         </div>
+                    </div>
+                    <input type="submit" name="save" class="btn btn-primary" value="Simpan" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
